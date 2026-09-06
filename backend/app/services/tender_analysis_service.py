@@ -12,6 +12,9 @@ from app.services.certification_intelligence_service import (
     get_certification_intelligence,
 )
 from app.services.knowledge_graph_service import get_standard_relationships
+from app.services.tender_gap_analysis_service import (
+    analyze_tender_gaps,
+)
 
 
 # ============================================================
@@ -19,7 +22,9 @@ from app.services.knowledge_graph_service import get_standard_relationships
 # ============================================================
 
 STANDARD_REFERENCE_PATTERN = re.compile(
-    r"\bIS\s+\d+(?:\s*\(Part\s+\d+\))?(?:\s*:\s*\d{4})?",
+    r"\bIS\s+\d+"
+    r"(?:\s*\(Part\s+\d+\))?"
+    r"(?:\s*:\s*\d{4})?",
     re.IGNORECASE,
 )
 
@@ -34,10 +39,13 @@ GRADE_PATTERN = re.compile(
 # ============================================================
 
 def normalize_text(text: str) -> str:
+    """
+    Normalize whitespace in tender text.
+    """
     return re.sub(
         r"\s+",
         " ",
-        text or ""
+        text or "",
     ).strip()
 
 
@@ -46,41 +54,55 @@ def normalize_text(text: str) -> str:
 # ============================================================
 
 def extract_product(tender_text: str) -> Optional[str]:
+    """
+    Identify the main procurement product.
+    """
 
     text = tender_text.lower()
 
     product_patterns = [
-        ("cement", [
+        (
             "cement",
-            "ordinary portland cement",
-            "opc",
-            "portland cement",
-        ]),
-
-        ("aggregate", [
+            [
+                "cement",
+                "ordinary portland cement",
+                "opc",
+                "portland cement",
+            ],
+        ),
+        (
             "aggregate",
-            "coarse aggregate",
-            "fine aggregate",
-        ]),
-
-        ("concrete", [
+            [
+                "aggregate",
+                "coarse aggregate",
+                "fine aggregate",
+            ],
+        ),
+        (
             "concrete",
-            "ready mix concrete",
-            "reinforced concrete",
-        ]),
-
-        ("steel", [
+            [
+                "concrete",
+                "ready mix concrete",
+                "reinforced concrete",
+            ],
+        ),
+        (
             "steel",
-            "reinforcement steel",
-            "reinforcement bar",
-            "rebar",
-        ]),
-
-        ("brick", [
+            [
+                "steel",
+                "reinforcement steel",
+                "reinforcement bar",
+                "rebar",
+            ],
+        ),
+        (
             "brick",
-            "clay brick",
-            "burnt clay brick",
-        ]),
+            [
+                "brick",
+                "clay brick",
+                "burnt clay brick",
+            ],
+        ),
     ]
 
     for product, keywords in product_patterns:
@@ -97,6 +119,9 @@ def extract_product(tender_text: str) -> Optional[str]:
 def extract_material(
     tender_text: str
 ) -> Optional[str]:
+    """
+    Identify the primary material.
+    """
 
     text = tender_text.lower()
 
@@ -125,24 +150,27 @@ def extract_material(
 def extract_cement_type(
     tender_text: str
 ) -> Optional[str]:
+    """
+    Identify cement type when present.
+    """
 
     text = tender_text.lower()
 
     if (
         "ordinary portland cement" in text
-        or "opc" in text
+        or re.search(r"\bopc\b", text)
     ):
         return "ordinary_portland_cement"
 
     if (
         "portland pozzolana cement" in text
-        or "ppc" in text
+        or re.search(r"\bppc\b", text)
     ):
         return "portland_pozzolana_cement"
 
     if (
         "portland slag cement" in text
-        or "psc" in text
+        or re.search(r"\bpsc\b", text)
     ):
         return "portland_slag_cement"
 
@@ -162,6 +190,9 @@ def extract_cement_type(
 def extract_grade(
     tender_text: str
 ) -> Optional[str]:
+    """
+    Extract cement grade such as 33, 43 or 53.
+    """
 
     match = GRADE_PATTERN.search(
         tender_text or ""
@@ -180,19 +211,17 @@ def extract_grade(
 def extract_application(
     tender_text: str
 ) -> Optional[str]:
+    """
+    Identify intended application.
+
+    More specific applications are checked first
+    to avoid generic construction terms overriding
+    specific use cases.
+    """
 
     text = tender_text.lower()
 
     application_patterns = [
-        (
-            "building construction",
-            [
-                "building construction",
-                "building works",
-                "construction work",
-            ],
-        ),
-
         (
             "reinforced concrete construction",
             [
@@ -201,16 +230,6 @@ def extract_application(
                 "rcc",
             ],
         ),
-
-        (
-            "road construction",
-            [
-                "road construction",
-                "road works",
-                "highway construction",
-            ],
-        ),
-
         (
             "structural construction",
             [
@@ -219,7 +238,32 @@ def extract_application(
                 "structural works",
             ],
         ),
+        (
+            "road construction",
+            [
+                "road construction",
+                "road works",
+                "highway construction",
+            ],
+        ),
+        (
+            "building construction",
+            [
+                "building construction",
+                "building works",
+                "construction work",
+            ],
+        ),
     ]
+
+    # IS 456 is the code of practice for plain and reinforced
+    # concrete. When the tender explicitly states that concrete
+    # works shall comply with IS 456, treat the application as
+    # reinforced-concrete/structural construction context.
+    # This is an explicit-reference inference, not an AI diagnosis.
+    if re.search(r"\bis\s+456\s*:\s*2000\b", text, re.IGNORECASE):
+        if "concrete work" in text or "concrete works" in text or "reinforced concrete" in text:
+            return "reinforced concrete construction"
 
     for application, keywords in application_patterns:
 
@@ -253,6 +297,10 @@ CERTIFICATION_TERMS = [
 def detect_certification_requirement(
     tender_text: str
 ) -> bool:
+    """
+    Detect whether the tender explicitly mentions
+    BIS/certification requirements.
+    """
 
     text = (
         tender_text or ""
@@ -272,6 +320,10 @@ def extract_tender_requirements(
     tender_text: str,
     query_intent=None
 ) -> Dict:
+    """
+    Extract structured procurement requirements
+    from the tender text.
+    """
 
     product = extract_product(
         tender_text
@@ -302,13 +354,27 @@ def extract_tender_requirements(
         "grade": grade,
         "application": application,
 
-        "structural_use": any(
-            phrase in text
-            for phrase in [
-                "structural",
-                "reinforced concrete",
-                "rcc",
-            ]
+        "structural_use": (
+            any(
+                phrase in text
+                for phrase in [
+                    "structural",
+                    "reinforced concrete",
+                    "rcc",
+                ]
+            )
+            or bool(
+                re.search(
+                    r"\bis\s+456\s*:\s*2000\b",
+                    text,
+                    re.IGNORECASE,
+                )
+                and (
+                    "concrete work" in text
+                    or "concrete works" in text
+                    or "plain and reinforced concrete" in text
+                )
+            )
         ),
 
         "seismic_requirement": any(
@@ -371,6 +437,13 @@ def extract_tender_requirements(
 def extract_standard_references(
     tender_text: str
 ) -> List[str]:
+    """
+    Extract explicit references such as:
+
+    IS 456:2000
+    IS 269:2013
+    IS 4031 (Part 1):1996
+    """
 
     matches = STANDARD_REFERENCE_PATTERN.findall(
         tender_text or ""
@@ -401,6 +474,7 @@ def extract_standard_references(
         if key not in seen:
 
             seen.add(key)
+
             result.append(
                 reference
             )
@@ -415,6 +489,10 @@ def extract_standard_references(
 def select_primary_standard(
     search_results: List[Dict]
 ) -> Optional[Dict]:
+    """
+    Select the highest-ranked semantic-search result
+    as the primary candidate.
+    """
 
     if not search_results:
         return None
@@ -460,6 +538,10 @@ def analyze_version_gap(
     db: Session,
     standard: Standard
 ) -> Optional[Dict]:
+    """
+    Check whether the selected standard is historical
+    or has a current replacement.
+    """
 
     resolution = resolve_standard_version(
         db,
@@ -544,6 +626,14 @@ def analyze_certification_gap(
     standard: Standard,
     certification_required: bool
 ) -> Optional[Dict]:
+    """
+    Check certification applicability based on
+    currently verified certification records.
+
+    IMPORTANT:
+    Absence of certification evidence does not prove
+    that certification is not applicable.
+    """
 
     certification = (
         get_certification_intelligence(
@@ -619,7 +709,8 @@ def analyze_certification_gap(
             "message": (
                 "The tender requires certification, "
                 "but compulsory certification evidence "
-                "was not found in the current dataset."
+                "was not found in the current dataset. "
+                "Manual verification is required."
             ),
 
             "evidence":
@@ -638,7 +729,9 @@ def analyze_certification_gap(
 
         "message": (
             "No certification evidence is currently "
-            "recorded in the dataset."
+            "recorded in the verified dataset. "
+            "This does not establish that certification "
+            "is inapplicable."
         ),
 
         "evidence":
@@ -654,6 +747,13 @@ def analyze_grade_gap(
     standard: Standard,
     requirements: Dict
 ) -> Optional[Dict]:
+    """
+    Check whether cement grade is specified.
+
+    Currently this logic is intentionally limited
+    to cement because the current Phase 5B scope
+    supports 33/43/53 cement grades.
+    """
 
     product = requirements.get(
         "product"
@@ -667,6 +767,7 @@ def analyze_grade_gap(
         return None
 
     if grade:
+
         return {
             "requirement":
                 "Cement grade",
@@ -717,6 +818,9 @@ def analyze_amendments(
     db: Session,
     standard: Standard
 ) -> Optional[Dict]:
+    """
+    Retrieve verified amendment history.
+    """
 
     history = get_amendment_history(
         db,
@@ -790,6 +894,10 @@ def validate_explicit_references(
     db: Session,
     references: List[str]
 ) -> List[Dict]:
+    """
+    Validate standards explicitly mentioned
+    in the tender.
+    """
 
     results = []
 
@@ -845,7 +953,198 @@ def validate_explicit_references(
             })
 
     return results
+# ============================================================
+# APPLICABLE STANDARDS
+# ============================================================
 
+def build_applicable_standards(
+    explicit_references: List[Dict],
+    primary_standard: Optional[Dict]
+) -> List[Dict]:
+    """
+    Build a unified list of standards applicable to the tender.
+
+    Explicitly referenced standards are given priority because
+    they represent standards directly stated in the tender.
+    The semantic primary candidate is retained separately.
+    """
+
+    applicable = []
+    seen = set()
+
+    # --------------------------------------------------------
+    # 1. Explicitly referenced standards
+    # --------------------------------------------------------
+
+    for reference in explicit_references:
+        standard = {
+            "reference": reference.get("reference"),
+            "role": "Explicitly referenced",
+            "status": reference.get("status"),
+            "standard_id": reference.get("standard_id"),
+            "title": reference.get("title"),
+        }
+
+        version_intelligence = reference.get(
+            "version_intelligence"
+        )
+
+        if version_intelligence:
+            standard["version_intelligence"] = version_intelligence
+
+            current_standard = version_intelligence.get(
+                "current_standard"
+            )
+
+            if current_standard:
+                standard["current_standard"] = current_standard
+
+                version_status = (
+                    version_intelligence.get(
+                        "version_status"
+                    )
+                    or ""
+                ).lower()
+
+                if (
+                    "historical" in version_status
+                    or "referenced" in version_status
+                ):
+                    standard["status"] = (
+                        "Historical / Referenced"
+                    )
+                    standard["version_action"] = (
+                        "Verify current applicable version"
+                    )
+                else:
+                    standard["version_action"] = (
+                        "Current candidate"
+                    )
+
+        key = (
+            standard.get("reference")
+            or ""
+        ).lower()
+
+        if key and key not in seen:
+            seen.add(key)
+            applicable.append(standard)
+
+    # --------------------------------------------------------
+    # 2. Semantic primary candidate
+    # --------------------------------------------------------
+
+    if primary_standard:
+        key = (
+            primary_standard.get("is_number")
+            or ""
+        ).lower()
+
+        if key not in seen:
+            applicable.append({
+                "reference": primary_standard.get(
+                    "is_number"
+                ),
+                "role": "AI-recommended primary candidate",
+                "status": primary_standard.get(
+                    "status"
+                ),
+                "standard_id": primary_standard.get(
+                    "id"
+                ),
+                "title": primary_standard.get(
+                    "title"
+                ),
+                "confidence": primary_standard.get(
+                    "confidence"
+                ),
+            })
+
+    return applicable
+
+# ============================================================
+# MULTI-STANDARD VERSION ANALYSIS
+# ============================================================
+
+def analyze_explicit_standard_versions(
+    explicit_references: List[Dict]
+) -> List[Dict]:
+
+    results = []
+
+    for reference in explicit_references:
+
+        version = reference.get(
+            "version_intelligence"
+        )
+
+        if not version:
+            continue
+
+        version_status = (
+            version.get("version_status")
+            or ""
+        ).lower()
+
+        current_standard = version.get(
+            "current_standard"
+        )
+
+        historical = (
+            "historical" in version_status
+            or "referenced" in version_status
+        )
+
+        if historical:
+            results.append({
+                "requirement":
+                    f"Referenced standard "
+                    f"{reference.get('reference')}",
+
+                "status": "GAP",
+
+                "severity": "HIGH",
+
+                "message": (
+                    f"{reference.get('reference')} "
+                    "is a historical/referenced version."
+                ),
+
+                "evidence": {
+                    "referenced_standard":
+                        reference.get("reference"),
+
+                    "current_standard":
+                        current_standard
+                },
+
+                "recommended_action": (
+                    "Verify and update the tender "
+                    "to the currently applicable "
+                    "BIS standard version."
+                )
+            })
+
+        else:
+            results.append({
+                "requirement":
+                    f"Referenced standard "
+                    f"{reference.get('reference')}",
+
+                "status": "OK",
+
+                "severity": "LOW",
+
+                "message": (
+                    f"{reference.get('reference')} "
+                    "is currently identified as an "
+                    "active/current candidate."
+                ),
+
+                "evidence": version
+            })
+
+    return results
 
 # ============================================================
 # KNOWLEDGE GRAPH
@@ -855,6 +1154,9 @@ def analyze_related_standards(
     db: Session,
     standard: Standard
 ) -> Optional[Dict]:
+    """
+    Retrieve related standards from the knowledge graph.
+    """
 
     graph = get_standard_relationships(
         db,
@@ -917,8 +1219,15 @@ def determine_human_review(
     gaps: List[Dict],
     explicit_references: List[Dict]
 ) -> Dict:
+    """
+    Determine whether human verification is required.
+    """
 
     reasons = []
+
+    # --------------------------------------------------------
+    # Primary standard confidence
+    # --------------------------------------------------------
 
     if not primary:
 
@@ -939,6 +1248,10 @@ def determine_human_review(
                 "Primary standard confidence is below 0.60."
             )
 
+    # --------------------------------------------------------
+    # High-severity gaps
+    # --------------------------------------------------------
+
     if any(
         gap.get("severity") == "HIGH"
         and gap.get("status") == "GAP"
@@ -948,6 +1261,10 @@ def determine_human_review(
         reasons.append(
             "A high-severity procurement gap was detected."
         )
+
+    # --------------------------------------------------------
+    # Explicit references that cannot be resolved
+    # --------------------------------------------------------
 
     if any(
         reference.get("status") == "NOT_FOUND"
@@ -977,14 +1294,36 @@ def analyze_tender(
     tender_text: str,
     top_k: int = 5
 ) -> Dict:
+    """
+    Complete tender analysis pipeline.
+
+    Pipeline:
+
+    1. Normalize tender
+    2. Semantic search
+    3. Extract requirements
+    4. Select primary standard
+    5. Validate explicit references
+    6. Resolve primary standard from DB
+    7. Version intelligence
+    8. Certification intelligence
+    9. Grade analysis
+    10. Amendment intelligence
+    11. Multi-standard analysis
+    12. Knowledge graph
+    13. Phase 5B gap analysis
+    14. Human review
+    15. Audit trail
+    16. Final response
+    """
 
     tender_text = normalize_text(
         tender_text
     )
 
-    # --------------------------------------------------------
+    # ========================================================
     # STEP 1 — Semantic Search
-    # --------------------------------------------------------
+    # ========================================================
 
     search_results = semantic_search(
         db,
@@ -992,25 +1331,25 @@ def analyze_tender(
         top_k
     )
 
-    # --------------------------------------------------------
+    # ========================================================
     # STEP 2 — Requirements
-    # --------------------------------------------------------
+    # ========================================================
 
     requirements = extract_tender_requirements(
         tender_text
     )
 
-    # --------------------------------------------------------
+    # ========================================================
     # STEP 3 — Primary Standard
-    # --------------------------------------------------------
+    # ========================================================
 
     primary = select_primary_standard(
         search_results
     )
 
-    # --------------------------------------------------------
+    # ========================================================
     # STEP 4 — Explicit References
-    # --------------------------------------------------------
+    # ========================================================
 
     explicit_references = (
         validate_explicit_references(
@@ -1021,9 +1360,9 @@ def analyze_tender(
         )
     )
 
-    # --------------------------------------------------------
-    # NO RESULT CASE
-    # --------------------------------------------------------
+    # ========================================================
+    # NO PRIMARY RESULT CASE
+    # ========================================================
 
     if not primary:
 
@@ -1031,6 +1370,28 @@ def analyze_tender(
             None,
             [],
             explicit_references
+        )
+
+        gap_analysis = analyze_tender_gaps(
+            requirements=requirements,
+            primary_standard=None,
+            existing_gaps=[],
+            explicit_reference_validation=explicit_references,
+        )
+
+        audit_trail = [
+            "tender_received",
+            "requirements_extracted",
+            "semantic_search_completed",
+            "primary_standard_not_identified",
+            "explicit_references_validated",
+            "gap_analysis_completed",
+            "human_review_decision_generated",
+        ]
+
+        applicable_standards = build_applicable_standards(
+            explicit_references,
+            None
         )
 
         return {
@@ -1043,6 +1404,9 @@ def analyze_tender(
             "primary_standard":
                 None,
 
+            "applicable_standards":
+                applicable_standards,
+
             "candidate_standards":
                 search_results,
 
@@ -1052,23 +1416,29 @@ def analyze_tender(
             "gaps":
                 [],
 
+            "gap_analysis":
+                gap_analysis,
+
             "related_standards":
                 {},
 
             "human_review_required":
-                review["required"],
+                True,
 
             "review_reasons":
                 review["reasons"],
+
+            "audit_trail":
+                audit_trail,
 
             "analysis_scope":
                 "Metadata-level procurement analysis; "
                 "not clause-level compliance verification.",
         }
 
-    # --------------------------------------------------------
+    # ========================================================
     # STEP 5 — Resolve Database Standard
-    # --------------------------------------------------------
+    # ========================================================
 
     standard = (
         db.query(Standard)
@@ -1079,12 +1449,51 @@ def analyze_tender(
         .first()
     )
 
+    # ========================================================
+    # DATABASE STANDARD NOT FOUND
+    # ========================================================
+
     if not standard:
 
         review = determine_human_review(
             primary,
             [],
             explicit_references
+        )
+
+        review["required"] = True
+
+        if (
+            "Primary standard could not be "
+            "resolved in the database."
+            not in review["reasons"]
+        ):
+            review["reasons"].append(
+                "Primary standard could not be "
+                "resolved in the database."
+            )
+
+        gap_analysis = analyze_tender_gaps(
+            requirements=requirements,
+            primary_standard=primary,
+            existing_gaps=[],
+            explicit_reference_validation=explicit_references,
+        )
+
+        audit_trail = [
+            "tender_received",
+            "requirements_extracted",
+            "semantic_search_completed",
+            "primary_standard_selected",
+            "explicit_references_validated",
+            "primary_standard_database_resolution_failed",
+            "gap_analysis_completed",
+            "human_review_decision_generated",
+        ]
+
+        applicable_standards = build_applicable_standards(
+            explicit_references,
+            primary
         )
 
         return {
@@ -1097,6 +1506,9 @@ def analyze_tender(
             "primary_standard":
                 primary,
 
+            "applicable_standards":
+                applicable_standards,
+
             "candidate_standards":
                 search_results,
 
@@ -1106,6 +1518,9 @@ def analyze_tender(
             "gaps":
                 [],
 
+            "gap_analysis":
+                gap_analysis,
+
             "related_standards":
                 {},
 
@@ -1113,22 +1528,25 @@ def analyze_tender(
                 True,
 
             "review_reasons":
-                review["reasons"]
-                + [
-                    "Primary standard could not be "
-                    "resolved in the database."
-                ],
+                review["reasons"],
+
+            "audit_trail":
+                audit_trail,
 
             "analysis_scope":
                 "Metadata-level procurement analysis; "
                 "not clause-level compliance verification.",
         }
 
-    # --------------------------------------------------------
-    # STEP 6 — Gap Analysis
-    # --------------------------------------------------------
+    # ========================================================
+    # STEP 6 — Initialize Gaps
+    # ========================================================
 
-    gaps = []
+    gaps: List[Dict] = []
+
+    # ========================================================
+    # STEP 7 — Version Intelligence
+    # ========================================================
 
     version_gap = analyze_version_gap(
         db,
@@ -1136,9 +1554,14 @@ def analyze_tender(
     )
 
     if version_gap:
+
         gaps.append(
             version_gap
         )
+
+    # ========================================================
+    # STEP 8 — Certification Intelligence
+    # ========================================================
 
     certification_gap = analyze_certification_gap(
         db,
@@ -1149,9 +1572,14 @@ def analyze_tender(
     )
 
     if certification_gap:
+
         gaps.append(
             certification_gap
         )
+
+    # ========================================================
+    # STEP 9 — Grade Analysis
+    # ========================================================
 
     grade_gap = analyze_grade_gap(
         standard,
@@ -1159,9 +1587,14 @@ def analyze_tender(
     )
 
     if grade_gap:
+
         gaps.append(
             grade_gap
         )
+
+    # ========================================================
+    # STEP 10 — Amendment Intelligence
+    # ========================================================
 
     amendment_gap = analyze_amendments(
         db,
@@ -1169,13 +1602,24 @@ def analyze_tender(
     )
 
     if amendment_gap:
+
         gaps.append(
             amendment_gap
         )
+    # ========================================================
+    # STEP 11 — Multi-Standard Analysis
+    # ========================================================
 
-    # --------------------------------------------------------
-    # STEP 7 — Knowledge Graph
-    # --------------------------------------------------------
+    # Keep explicitly referenced standards separate from the
+    # semantic primary candidate. This prevents an explicit
+    # historical reference from being silently replaced.
+    applicable_standards = build_applicable_standards(
+        explicit_references,
+        primary
+    )
+    # ========================================================
+    # STEP 12 — Knowledge Graph
+    # ========================================================
 
     related_standards = (
         analyze_related_standards(
@@ -1184,9 +1628,20 @@ def analyze_tender(
         )
     )
 
-    # --------------------------------------------------------
-    # STEP 8 — Human Review
-    # --------------------------------------------------------
+    # ========================================================
+    # STEP 13 — PHASE 5B GAP ANALYSIS
+    # ========================================================
+
+    gap_analysis = analyze_tender_gaps(
+        requirements=requirements,
+        primary_standard=primary,
+        existing_gaps=gaps,
+        explicit_reference_validation=explicit_references,
+    )
+
+    # ========================================================
+    # STEP 14 — HUMAN REVIEW
+    # ========================================================
 
     review = determine_human_review(
         primary,
@@ -1195,8 +1650,64 @@ def analyze_tender(
     )
 
     # --------------------------------------------------------
-    # STEP 9 — Audit Trail
+    # Phase 5B high-severity gap decision
     # --------------------------------------------------------
+
+    high_gap_count = (
+        gap_analysis
+        .get("gap_summary", {})
+        .get("high", 0)
+    )
+
+    if high_gap_count > 0:
+
+        review["required"] = True
+
+        if (
+            "A high-severity procurement gap was detected."
+            not in review["reasons"]
+        ):
+
+            review["reasons"].append(
+                "A high-severity procurement gap was detected."
+            )
+
+    # --------------------------------------------------------
+    # Low-confidence + warnings
+    # --------------------------------------------------------
+
+    total_warnings = (
+        gap_analysis
+        .get("gap_summary", {})
+        .get("total_warnings", 0)
+    )
+
+    primary_confidence = (
+        primary.get("confidence", 0.0)
+        if primary
+        else 0.0
+    )
+
+    if (
+        primary
+        and total_warnings > 0
+        and primary_confidence < 0.60
+    ):
+
+        review["required"] = True
+
+        if (
+            "Primary standard confidence is below 0.60."
+            not in review["reasons"]
+        ):
+
+            review["reasons"].append(
+                "Primary standard confidence is below 0.60."
+            )
+
+    # ========================================================
+    # STEP 15 — AUDIT TRAIL
+    # ========================================================
 
     audit_trail = [
         "tender_received",
@@ -1206,15 +1717,16 @@ def analyze_tender(
         "explicit_references_validated",
         "version_checked",
         "certification_checked",
+        "grade_checked",
         "amendments_checked",
         "knowledge_graph_traversed",
         "gap_analysis_completed",
         "human_review_decision_generated",
     ]
 
-    # --------------------------------------------------------
-    # FINAL RESPONSE
-    # --------------------------------------------------------
+    # ========================================================
+    # STEP 16 — FINAL RESPONSE
+    # ========================================================
 
     return {
         "tender_text":
@@ -1226,14 +1738,25 @@ def analyze_tender(
         "primary_standard":
             primary,
 
+        "applicable_standards":
+            applicable_standards,
+
         "candidate_standards":
             search_results,
 
         "explicit_standard_validation":
             explicit_references,
 
+        # Normalized unresolved gaps only.
+        # Phase 5B is authoritative for the final gap list;
+        # FOUND/OK/NO_EVIDENCE items remain represented in
+        # gap_analysis.verified_requirements / warnings.
         "gaps":
-            gaps,
+            gap_analysis.get("gaps", []),
+
+        # Phase 5B structured gap analysis
+        "gap_analysis":
+            gap_analysis,
 
         "related_standards":
             related_standards,
