@@ -1,6 +1,6 @@
 from typing import Optional
 
-from pydantic import BaseModel
+from pydantic import BaseModel,Field
 
 
 class QueryIntent(BaseModel):
@@ -21,3 +21,17 @@ class QueryIntent(BaseModel):
     standard_type: Optional[str] = None
 
     raw_query: str
+
+class TenderAnalysisRequest(BaseModel):
+    tender_text: str = Field(
+        ...,
+        min_length=20,
+        description="Procurement tender or specification text"
+    )
+
+    top_k: int = Field(
+        default=5,
+        ge=1,
+        le=20,
+        description="Number of candidate standards to retrieve"
+    )

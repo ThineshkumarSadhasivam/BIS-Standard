@@ -2,17 +2,35 @@ import json
 from pathlib import Path
 
 import faiss
+from sqlalchemy.orm import Session
 
-from app.services.embedding_service import (
-    generate_query_embedding
+from app.services.version_intelligence_service import (
+    enrich_search_result,
 )
 
-from app.services.query_understanding_service import (
-    understand_query
+from app.services.amendment_intelligence_service import (
+    enrich_with_amendment_intelligence,
+)
+
+from app.services.certification_intelligence_service import (
+    enrich_with_certification_intelligence,
+)
+
+from app.services.compliance_intelligence_service import (
+    enrich_compliance_result,
+)
+
+# Existing imports from your current project
+from app.services.embedding_service import (
+    generate_query_embedding,
 )
 
 from app.services.reranking_service import (
-    rerank_results
+    rerank_results,
+)
+
+from app.services.query_understanding_service import (
+    understand_query,
 )
 
 
@@ -20,9 +38,7 @@ from app.services.reranking_service import (
 # VECTOR STORE
 # =========================================================
 
-VECTOR_STORE_DIR = Path(
-    "vector_store"
-)
+VECTOR_STORE_DIR = Path("vector_store")
 
 INDEX_PATH = (
     VECTOR_STORE_DIR
@@ -96,6 +112,7 @@ def load_vector_store():
 # =========================================================
 
 def semantic_search(
+    db: Session,
     query: str,
     top_k: int = 5
 ):
@@ -167,7 +184,6 @@ def semantic_search(
     ):
 
         if index_position < 0:
-
             continue
 
         standard = metadata[
@@ -176,33 +192,27 @@ def semantic_search(
 
         results.append(
             {
+                "id": standard["id"],
                 "rank": len(results) + 1,
-
                 "score": round(
                     float(score),
                     4
                 ),
-
                 "is_number": standard[
                     "is_number"
                 ],
-
                 "title": standard[
                     "title"
                 ],
-
                 "domain": standard[
                     "domain"
                 ],
-
                 "standard_type": standard[
                     "standard_type"
                 ],
-
                 "status": standard[
                     "status"
                 ],
-
                 "source_url": standard[
                     "source_url"
                 ],
@@ -214,11 +224,8 @@ def semantic_search(
     # =====================================================
 
     reranked = rerank_results(
-
         query=query,
-
         results=results,
-
         query_intent=query_intent
     )
 
@@ -226,6 +233,52 @@ def semantic_search(
     # 7. TOP-K
     # =====================================================
 
-    return reranked[
-        :top_k
-    ]
+    final_results = []
+
+    for item in reranked[:top_k]:
+
+        # -------------------------------------------------
+        # Version Intelligence
+        # -------------------------------------------------
+
+        item = enrich_search_result(
+            db,
+            item
+        )
+
+        # -------------------------------------------------
+        # Amendment Intelligence
+        # -------------------------------------------------
+
+        item = (
+            enrich_with_amendment_intelligence(
+                db,
+                item
+            )
+        )
+
+        # -------------------------------------------------
+        # Certification Intelligence
+        # -------------------------------------------------
+
+        item = (
+            enrich_with_certification_intelligence(
+                db,
+                item
+            )
+        )
+
+        # -------------------------------------------------
+        # Compliance Intelligence
+        # -------------------------------------------------
+
+        item = enrich_compliance_result(
+            db,
+            item
+        )
+
+        final_results.append(
+            item
+        )
+
+    return final_results

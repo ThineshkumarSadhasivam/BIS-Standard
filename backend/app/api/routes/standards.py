@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
-
+from app.core.database import get_db
 from app.schemas.standard import StandardSearchRequest
 
 from app.services.semantic_search_service import semantic_search
@@ -24,6 +24,12 @@ from app.services.certification_intelligence_service import (
 from app.services.knowledge_graph_service import (
     get_standard_relationships,
     enrich_with_knowledge_graph,
+)
+
+from app.schemas.query import TenderAnalysisRequest
+
+from app.services.tender_analysis_service import (
+    analyze_tender,
 )
 
 from app.core.database import get_db
@@ -217,3 +223,13 @@ def get_standard_relationships_api(
         )
 
     return result
+@router.post("/analyze-tender")
+def analyze_tender_endpoint(
+    request: TenderAnalysisRequest,
+    db: Session = Depends(get_db),
+):
+    return analyze_tender(
+        db=db,
+        tender_text=request.tender_text,
+        top_k=request.top_k,
+    )
