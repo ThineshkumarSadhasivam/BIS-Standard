@@ -306,6 +306,45 @@ missing_standards = [
         "superseded_by": None,
         "metadata_rule": "Verify current lifecycle metadata from BIS Know Your Standard."
     },
+        {
+        "is_number": "IS 13252 (Part 1):2010",
+        "title": "Information Technology Equipment - Safety Part 1: General Requirements (Second Revision)",
+        "domain": "Electronics / Information Technology",
+        "standard_type": "Product Specification",
+        "source_authority": "BIS",
+        "source_type": "BIS official standard record",
+        "verification_status": "BIS-source verified",
+        "status": "Active/Current",
+        "embedding_text": "IS 13252 (Part 1):2010 | Information Technology Equipment - Safety Part 1: General Requirements | Electronics / Information Technology | Product Specification",
+        "source_document": "BIS Standard Details",
+        "source_url": "https://standards.bis.gov.in/",
+        "reviewed_in": "2025",
+        "amendment_count": 2,
+        "certification_status": "N/A",
+        "supersedes": None,
+        "superseded_by": None,
+        "metadata_rule": "BIS verified current standard record; amendment history is maintained separately in standard_amendments."
+    },
+
+    {
+        "is_number": "IS 16240:2023",
+        "title": "REVERSE OSMOSIS RO BASED POINT-OF-USE POU WATER TREATMENT SYSTEM FOR DRINKING PURPOSES SPECIFICATION first revision",
+        "domain": "Water Treatment / Drinking Water",
+        "standard_type": "Product Specification",
+        "source_authority": "BIS",
+        "source_type": "BIS official standard record",
+        "verification_status": "BIS-source verified",
+        "status": "Active/Current",
+        "embedding_text": "IS 16240:2023 | Reverse Osmosis RO Based Point-of-Use POU Water Treatment System for Drinking Purposes Specification | Water Treatment / Drinking Water | Product Specification",
+        "source_document": "BIS Standard Details",
+        "source_url": "https://standards.bis.gov.in/",
+        "reviewed_in": "2023",
+        "amendment_count": 1,
+        "certification_status": "Mandatory Certification",
+        "supersedes": None,
+        "superseded_by": None,
+        "metadata_rule": "BIS verified current standard record; amendment history is maintained separately in standard_amendments."
+    },
 ]
 
 

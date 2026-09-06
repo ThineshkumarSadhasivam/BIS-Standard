@@ -70,7 +70,6 @@ def resolve_standard_version(
 
             "resolution_note": resolution.note,
 
-            "amendment_count": standard.amendment_count,
 
             "supersedes": standard.supersedes,
 
@@ -120,7 +119,6 @@ def resolve_standard_version(
                 f"{standard.superseded_by}."
             ),
 
-            "amendment_count": standard.amendment_count,
 
             "supersedes": standard.supersedes,
 
@@ -147,7 +145,6 @@ def resolve_standard_version(
 
         "resolution_note": None,
 
-        "amendment_count": standard.amendment_count,
 
         "supersedes": standard.supersedes,
 
@@ -161,26 +158,47 @@ def enrich_search_result(
 ):
     """
     Add version intelligence to a semantic-search result.
+
+    Search results currently identify standards using
+    their IS number rather than database ID.
     """
 
-    standard_id = result.get("id")
+    # ------------------------------------------------------------
+    # 1. Get IS number from search result
+    # ------------------------------------------------------------
 
-    if not standard_id:
+    is_number = result.get("is_number")
+
+    if not is_number:
         return result
+
+    # ------------------------------------------------------------
+    # 2. Find the corresponding standard in PostgreSQL
+    # ------------------------------------------------------------
 
     standard = (
         db.query(Standard)
-        .filter(Standard.id == standard_id)
+        .filter(
+            Standard.is_number == is_number
+        )
         .first()
     )
 
     if not standard:
         return result
 
+    # ------------------------------------------------------------
+    # 3. Resolve version intelligence
+    # ------------------------------------------------------------
+
     version_info = resolve_standard_version(
         db,
         standard
     )
+
+    # ------------------------------------------------------------
+    # 4. Attach intelligence to search result
+    # ------------------------------------------------------------
 
     result["version_intelligence"] = version_info
 

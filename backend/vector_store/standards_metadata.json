@@ -2824,5 +2824,23 @@
     "standard_type": "Product Specification",
     "status": "Historical Version / Referenced",
     "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 315,
+    "is_number": "IS 13252 (Part 1):2010",
+    "title": "Information Technology Equipment - Safety Part 1: General Requirements (Second Revision)",
+    "domain": "Electronics / Information Technology",
+    "standard_type": "Product Specification",
+    "status": "Active/Current",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 316,
+    "is_number": "IS 16240:2023",
+    "title": "REVERSE OSMOSIS RO BASED POINT-OF-USE POU WATER TREATMENT SYSTEM FOR DRINKING PURPOSES SPECIFICATION first revision",
+    "domain": "Water Treatment / Drinking Water",
+    "standard_type": "Product Specification",
+    "status": "Active/Current",
+    "source_url": "https://standards.bis.gov.in/"
   }
 ]

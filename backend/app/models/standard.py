@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer, String, Text
-
+from sqlalchemy.orm import relationship
 from app.core.database import Base
 
 
@@ -41,3 +41,9 @@ class Standard(Base):
     superseded_by = Column(Text, nullable=True)
 
     metadata_rule = Column(Text, nullable=True)
+
+    amendments = relationship(
+    "StandardAmendment",
+    back_populates="standard",
+    cascade="all, delete-orphan"
+)
