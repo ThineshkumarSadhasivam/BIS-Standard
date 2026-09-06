@@ -1,0 +1,40 @@
+source_is,target_is,relationship,evidence
+IS 456:2000,IS 269:2013,REFERENCED_STANDARD,IS 456 current BIS record
+IS 456:2000,IS 12269:2013,REFERENCED_STANDARD,IS 456 current BIS record
+IS 456:2000,IS 383:2016,REFERENCED_STANDARD,Concrete standards linkage
+IS 269:2015,IS 4031 (Part 1):1996,TEST_REFERENCE,Cement compendium
+IS 269:2015,IS 4031 (Part 2):1999,TEST_REFERENCE,Cement compendium
+IS 269:2015,IS 4031 (Part 3):1988,TEST_REFERENCE,Cement compendium
+IS 269:2015,IS 4031 (Part 5):1988,TEST_REFERENCE,Cement compendium
+IS 269:2015,IS 4031 (Part 6):1988,TEST_REFERENCE,Cement compendium
+IS 269:2015,IS 4031 (Part 8):1988,TEST_REFERENCE,Cement compendium
+IS 269:2015,IS 4032:1985,TEST_REFERENCE,Cement compendium
+IS 269:2015,IS 3812 (Part 1),MATERIAL_REFERENCE,Performance improver reference
+IS 269:2015,IS 12089,MATERIAL_REFERENCE,Performance improver reference
+IS 269:2015,IS 15388,MATERIAL_REFERENCE,Performance improver reference
+IS 269:2015,IS 1760 (Part 3),TEST_REFERENCE,Performance improver test
+IS 269:2015,IS 1727,TEST_REFERENCE,Performance improver/test reference
+IS 1180 (Part 1):2014,IS 2026 (Part 2):2010,TEST_REFERENCE,Transformer compendium
+IS 1180 (Part 1):2014,IS 2026 (Part 3):2018,TEST_REFERENCE,Transformer compendium
+IS 1180 (Part 3):2021,IS 2026 (Part 2):2010,TEST_REFERENCE,Transformer compendium
+IS 1180 (Part 3):2021,IS 2026 (Part 3):2018,TEST_REFERENCE,Transformer compendium
+IS 1180 (Part 1):2014,IS 10028 (Part 1):1985,INSTALLATION_SELECTION_REFERENCE,Transformer application guidance
+IS 1180 (Part 1):2014,IS 10028 (Part 2):1981,INSTALLATION_REFERENCE,Transformer application guidance
+IS 1180 (Part 1):2014,IS 10028 (Part 3):1981,MAINTENANCE_REFERENCE,Transformer application guidance
+IS 17018 (Part 1):2022,IS 17429:2020,TEST_REFERENCE,Solar pumping standards
+IS 17423:2020,IS 17410:2020,RELATED_MEDICAL_TEXTILE,BIS cross-reference
+IS 9550:2024,IS 228 (Part 1):1987,TEST_REFERENCE,BIS standard detail
+IS 9550:2024,IS 6396:2023,TEST_REFERENCE,BIS standard detail
+IS 6396:2023,IS 6885 (Part 1):2020,TEST_REFERENCE,BIS standard detail
+IS 6396:2023,IS 1501 (Part 1):2020,TEST_REFERENCE,BIS standard detail
+IS 4991:1968,IS 456:2000,REFERENCED_STANDARD,BIS standard detail
+IS 4991:1968,IS 800:2007,REFERENCED_STANDARD,BIS standard detail
+IS 4991:1968,IS 875 (Part 1):1987,REFERENCED_STANDARD,BIS standard detail
+IS 4991:1968,IS 875 (Part 2):1987,REFERENCED_STANDARD,BIS standard detail
+IS 4991:1968,IS 875 (Part 3):2015,REFERENCED_STANDARD,BIS standard detail
+IS 269:2015,IS 3812 (Part 1),CONFORMITY_INPUT,Fly ash performance improver
+IS 269:2015,IS 12089,CONFORMITY_INPUT,Granulated slag performance improver
+IS 269:2015,IS 15388,CONFORMITY_INPUT,Silica fume performance improver
+IS 269:2015,IS 16354,CONFORMITY_INPUT,Metakaolin performance improver
+IS 269:2015,IS 1344,CONFORMITY_INPUT,Spent catalyst reference
+IS 269:2015,IS 16714,CONFORMITY_INPUT,Ground granulated blast furnace slag reference

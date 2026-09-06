@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# Node
+node_modules/
+dist/
+
+# Environment files
+.env
+
+# Generated vector-store artifacts
+backend/vector_store/*.faiss
+backend/vector_store/*.pkl

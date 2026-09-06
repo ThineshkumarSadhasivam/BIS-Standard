@@ -1,0 +1,2 @@
+referenced_standard,current_standard,relationship,note
+IS 269:2013,IS 269:2015,VERSION/SUPERSESSION CHECK,"BIS current standard record retrieved for IS 269 is 2015 (Sixth Revision), while IS 456:2000's referred-standard list contains IS 269:2013. The system must preserve the cited version and separately resolve the current version."
