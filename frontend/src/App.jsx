@@ -1810,6 +1810,312 @@ function StandardIntelligence({
 
 
 /* ============================================================
+   KNOWLEDGE GRAPH
+============================================================ */
+
+function KnowledgeGraph({
+  primary,
+  relationships = [],
+}) {
+  const nodes = relationships
+    .filter(
+      (item) =>
+        item?.is_number ||
+        item?.standard_number ||
+        item?.reference
+    )
+    .slice(0, 12);
+
+  const centerX = 430;
+  const centerY = 190;
+  const radiusX = 285;
+  const radiusY = 135;
+
+  const graphNodes = nodes.map((item, index) => {
+    const angle =
+      -Math.PI / 2 +
+      (index * (Math.PI * 2)) /
+        Math.max(nodes.length, 1);
+
+    return {
+      ...item,
+      x:
+        centerX +
+        Math.cos(angle) * radiusX,
+      y:
+        centerY +
+        Math.sin(angle) * radiusY,
+    };
+  });
+
+  const primaryNumber =
+    primary?.is_number ||
+    "Recommended Standard";
+
+  const primaryTitle =
+    primary?.title ||
+    "AI-selected procurement standard";
+
+  if (!graphNodes.length) {
+    return (
+      <div className="graph-empty">
+        <span className="graph-empty-icon">G</span>
+        <div>
+          <strong>
+            No related standards mapped yet
+          </strong>
+          <p>
+            The primary recommendation is available,
+            but no verified relationship records were
+            returned for this analysis.
+          </p>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="knowledge-graph">
+
+      <div className="graph-legend">
+
+        <span>
+          <i className="legend-dot primary"></i>
+          Recommended
+        </span>
+
+        <span>
+          <i className="legend-dot test"></i>
+          Test
+        </span>
+
+        <span>
+          <i className="legend-dot material"></i>
+          Material
+        </span>
+
+        <span>
+          <i className="legend-dot conformity"></i>
+          Conformity
+        </span>
+
+      </div>
+
+
+      <div className="graph-canvas">
+
+        <svg
+          className="graph-svg"
+          viewBox="0 0 860 380"
+          role="img"
+          aria-label="Knowledge graph of related Indian Standards"
+        >
+
+          <defs>
+            <filter
+              id="graphShadow"
+              x="-30%"
+              y="-30%"
+              width="160%"
+              height="160%"
+            >
+              <feDropShadow
+                dx="0"
+                dy="3"
+                stdDeviation="4"
+                floodOpacity="0.10"
+              />
+            </filter>
+          </defs>
+
+
+          {/* RELATIONSHIP LINES */}
+
+          {graphNodes.map((node, index) => (
+            <line
+              key={`line-${index}`}
+              className={`graph-line ${getGraphCategory(node.relationship_type)}`}
+              x1={centerX}
+              y1={centerY}
+              x2={node.x}
+              y2={node.y}
+            />
+          ))}
+
+
+          {/* RELATED NODES */}
+
+          {graphNodes.map((node, index) => {
+            const category =
+              getGraphCategory(
+                node.relationship_type
+              );
+
+            const number =
+              node.is_number ||
+              node.standard_number ||
+              node.reference ||
+              "Standard";
+
+            const title =
+              node.title || "";
+
+            const shortTitle =
+              title.length > 30
+                ? `${title.slice(0, 30)}…`
+                : title;
+
+            return (
+              <g
+                key={`node-${index}`}
+                className={`graph-node-group ${category}`}
+                transform={`translate(${node.x - 67}, ${node.y - 29})`}
+              >
+
+                <rect
+                  className="graph-node"
+                  width="134"
+                  height="58"
+                  rx="8"
+                  filter="url(#graphShadow)"
+                />
+
+                <text
+                  className="graph-node-number"
+                  x="67"
+                  y="22"
+                  textAnchor="middle"
+                >
+                  {number}
+                </text>
+
+                <text
+                  className="graph-node-title"
+                  x="67"
+                  y="40"
+                  textAnchor="middle"
+                >
+                  {shortTitle || "Related Standard"}
+                </text>
+
+              </g>
+            );
+          })}
+
+
+          {/* PRIMARY NODE */}
+
+          <g
+            className="graph-primary-group"
+            transform={`translate(${centerX - 91}, ${centerY - 48})`}
+          >
+
+            <rect
+              className="graph-primary-node"
+              width="182"
+              height="96"
+              rx="12"
+              filter="url(#graphShadow)"
+            />
+
+            <text
+              className="graph-primary-label"
+              x="91"
+              y="24"
+              textAnchor="middle"
+            >
+              AI RECOMMENDED
+            </text>
+
+            <text
+              className="graph-primary-number"
+              x="91"
+              y="49"
+              textAnchor="middle"
+            >
+              {primaryNumber}
+            </text>
+
+            <text
+              className="graph-primary-title"
+              x="91"
+              y="70"
+              textAnchor="middle"
+            >
+              {primaryTitle.length > 26
+                ? `${primaryTitle.slice(0, 26)}…`
+                : primaryTitle}
+            </text>
+
+          </g>
+
+        </svg>
+
+      </div>
+
+
+      <div className="graph-node-list">
+
+        {graphNodes.map((item, index) => (
+          <div
+            className={`graph-node-summary ${getGraphCategory(
+              item.relationship_type
+            )}`}
+            key={`summary-${index}`}
+          >
+
+            <span className="graph-summary-dot"></span>
+
+            <div>
+              <strong>
+                {item.is_number ||
+                  item.standard_number ||
+                  item.reference ||
+                  "Standard"}
+              </strong>
+
+              <small>
+                {prettyValue(
+                  item.relationship_type ||
+                    "Related Standard"
+                )}
+              </small>
+            </div>
+
+          </div>
+        ))}
+
+      </div>
+
+    </div>
+  );
+}
+
+
+function getGraphCategory(
+  relationshipType
+) {
+  const value = String(
+    relationshipType || ""
+  ).toUpperCase();
+
+  if (value.includes("TEST")) {
+    return "test";
+  }
+
+  if (value.includes("MATERIAL")) {
+    return "material";
+  }
+
+  if (value.includes("CONFORMITY")) {
+    return "conformity";
+  }
+
+  return "related";
+}
+
+
+/* ============================================================
    DETAIL SECTION HEADER
 ============================================================ */
 
@@ -2268,20 +2574,23 @@ function ReportView({
 
       {/* KNOWLEDGE GRAPH */}
 
-      <div className="result-card full-width">
+      <div className="result-card full-width graph-card">
 
         <div className="card-title-row">
 
           <div>
-
             <span className="card-label">
               KNOWLEDGE GRAPH
             </span>
 
             <h4>
-              Related Standards
+              Standard Relationship Map
             </h4>
 
+            <p className="graph-subtitle">
+              The recommended standard is connected to
+              related testing, material, and conformity standards.
+            </p>
           </div>
 
           <span className="relationship-count">
@@ -2325,38 +2634,13 @@ function ReportView({
         </div>
 
 
-        {report.related_standards
-          ?.standards?.length > 0 && (
-
-          <div className="report-related-list">
-
-            {report.related_standards.standards
-              .slice(0, 18)
-              .map((item, index) => (
-
-                <div
-                  className="report-related-item"
-                  key={index}
-                >
-
-                  <strong>
-                    {item.is_number ||
-                      item.standard_number ||
-                      item.reference}
-                  </strong>
-
-                  <span>
-                    {item.relationship_type ||
-                      "Related Standard"}
-                  </span>
-
-                </div>
-
-              ))}
-
-          </div>
-
-        )}
+        <KnowledgeGraph
+          primary={report.recommended_standard}
+          relationships={
+            report.related_standards
+              ?.standards || []
+          }
+        />
 
       </div>
 
