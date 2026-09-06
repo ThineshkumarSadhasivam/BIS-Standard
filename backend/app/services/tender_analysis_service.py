@@ -1159,6 +1159,10 @@ def analyze_related_standards(
 ) -> Optional[Dict]:
     """
     Retrieve related standards from the knowledge graph.
+
+    The knowledge graph service returns each relationship with a
+    nested ``related_standard`` object. This function normalizes
+    that structure into a flat, frontend/report-friendly list.
     """
 
     graph = get_standard_relationships(
@@ -1174,42 +1178,101 @@ def analyze_related_standards(
         {}
     )
 
+    standards = []
+
+    category_names = [
+        "test_references",
+        "material_references",
+        "conformity_inputs",
+        "referenced_standards",
+    ]
+
+    for category_name in category_names:
+        items = categories.get(category_name, []) or []
+
+        for item in items:
+            if not isinstance(item, dict):
+                continue
+
+            related = item.get("related_standard") or {}
+
+            relationship_type = (
+                item.get("relationship_type")
+                or category_name.replace("_", " ").upper()
+            )
+
+            related_id = (
+                related.get("id")
+                or item.get("related_standard_id")
+                or item.get("standard_id")
+            )
+
+            is_number = (
+                related.get("is_number")
+                or item.get("is_number")
+                or item.get("standard_number")
+                or item.get("reference")
+            )
+
+            title = related.get("title") or item.get("title")
+            status = related.get("status") or item.get("status")
+
+            standards.append({
+                "id": related_id,
+                "is_number": is_number,
+                "standard_number": is_number,
+                "reference": is_number,
+                "title": title,
+                "status": status,
+                "relationship_type": relationship_type,
+                "direction": item.get("direction"),
+                "description": item.get("description"),
+                "source_document": item.get("source_document"),
+                "source_url": item.get("source_url"),
+            })
+
+    unique_standards = []
+    seen = set()
+
+    for item in standards:
+        key = (
+            item.get("id"),
+            item.get("is_number"),
+            item.get("relationship_type"),
+        )
+
+        if key in seen:
+            continue
+
+        seen.add(key)
+        unique_standards.append(item)
+
     return {
-        "relationship_count":
-            graph.get(
-                "relationship_count",
-                0
-            ),
-
-        "category_counts":
-            graph.get(
-                "category_counts",
-                {}
-            ),
-
-        "test_references":
-            categories.get(
-                "test_references",
-                []
-            ),
-
-        "material_references":
-            categories.get(
-                "material_references",
-                []
-            ),
-
-        "conformity_inputs":
-            categories.get(
-                "conformity_inputs",
-                []
-            ),
-
-        "referenced_standards":
-            categories.get(
-                "referenced_standards",
-                []
-            ),
+        "relationship_count": graph.get(
+            "relationship_count",
+            len(unique_standards)
+        ),
+        "category_counts": graph.get(
+            "category_counts",
+            {}
+        ),
+        "standards": unique_standards,
+        "test_references": [
+            item for item in unique_standards
+            if item.get("relationship_type") == "TEST_REFERENCE"
+        ],
+        "material_references": [
+            item for item in unique_standards
+            if item.get("relationship_type") == "MATERIAL_REFERENCE"
+        ],
+        "conformity_inputs": [
+            item for item in unique_standards
+            if item.get("relationship_type") == "CONFORMITY_INPUT"
+        ],
+        "referenced_standards": [
+            item for item in unique_standards
+            if item.get("relationship_type") == "REFERENCED_STANDARD"
+        ],
     }
 
 

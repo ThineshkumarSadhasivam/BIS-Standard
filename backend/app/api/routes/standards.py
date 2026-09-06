@@ -2,7 +2,8 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from app.core.database import get_db
 from app.schemas.standard import StandardSearchRequest
-
+from fastapi.responses import StreamingResponse
+from app.services.tender_analysis_service import analyze_tender
 from app.services.semantic_search_service import semantic_search
 from app.services.query_understanding_service import understand_query
 
@@ -14,6 +15,14 @@ from app.services.version_intelligence_service import (
 from app.services.amendment_intelligence_service import (
     get_amendment_history,
     enrich_with_amendment_intelligence,
+)
+
+from app.services.procurement_report_service import (
+    generate_procurement_report
+)
+
+from app.services.pdf_report_service import (
+    generate_procurement_pdf
 )
 
 from app.services.certification_intelligence_service import (
@@ -36,6 +45,12 @@ from app.core.database import get_db
 from app.models.standard import Standard
 
 from app.services.procurement_report_service import generate_procurement_report
+
+from fastapi.responses import StreamingResponse
+
+from app.services.pdf_report_service import (
+    generate_procurement_pdf,
+)
 
 
 router = APIRouter(
@@ -249,3 +264,74 @@ def procurement_report(
     )
 
     return generate_procurement_report(analysis)
+# =========================================================
+# PROCUREMENT INTELLIGENCE PDF
+# =========================================================
+
+# =========================================================
+# PROCUREMENT INTELLIGENCE PDF
+# =========================================================
+
+@router.post(
+    "/procurement-report/pdf"
+)
+def procurement_report_pdf(
+    request: TenderAnalysisRequest,
+    db: Session = Depends(get_db),
+):
+
+    try:
+
+        # -------------------------------------------------
+        # STEP 1 — Run the actual tender analysis
+        # -------------------------------------------------
+
+        analysis = analyze_tender(
+            db=db,
+            tender_text=request.tender_text,
+            top_k=request.top_k,
+        )
+
+        # -------------------------------------------------
+        # STEP 2 — Convert analysis into Procurement Report
+        # -------------------------------------------------
+
+        report = generate_procurement_report(
+            analysis
+        )
+
+        # -------------------------------------------------
+        # STEP 3 — Generate PDF
+        # -------------------------------------------------
+
+        pdf_buffer = generate_procurement_pdf(
+            report
+        )
+
+        # -------------------------------------------------
+        # STEP 4 — Return PDF
+        # -------------------------------------------------
+
+        filename = (
+            "StandardsInsight_"
+            "Procurement_Intelligence_Report.pdf"
+        )
+
+        return StreamingResponse(
+            pdf_buffer,
+            media_type="application/pdf",
+            headers={
+                "Content-Disposition":
+                    f'attachment; filename="{filename}"'
+            },
+        )
+
+    except Exception as exc:
+
+        raise HTTPException(
+            status_code=500,
+            detail=(
+                "Unable to generate procurement "
+                f"PDF report: {str(exc)}"
+            ),
+        )
