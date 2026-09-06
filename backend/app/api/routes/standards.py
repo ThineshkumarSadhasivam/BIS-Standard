@@ -35,6 +35,8 @@ from app.services.tender_analysis_service import (
 from app.core.database import get_db
 from app.models.standard import Standard
 
+from app.services.procurement_report_service import generate_procurement_report
+
 
 router = APIRouter(
     prefix="/standards",
@@ -65,6 +67,7 @@ def search_standards(
     # --------------------------------------------------------
 
     results = semantic_search(
+        db=db,
         query=request.query,
         top_k=request.top_k
     )
@@ -233,3 +236,16 @@ def analyze_tender_endpoint(
         tender_text=request.tender_text,
         top_k=request.top_k,
     )
+
+@router.post("/procurement-report")
+def procurement_report(
+    request: TenderAnalysisRequest,
+    db: Session = Depends(get_db),
+):
+    analysis = analyze_tender(
+        db=db,
+        tender_text=request.tender_text,
+        top_k=request.top_k,
+    )
+
+    return generate_procurement_report(analysis)

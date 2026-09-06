@@ -11,6 +11,9 @@ from app.services.amendment_intelligence_service import get_amendment_history
 from app.services.certification_intelligence_service import (
     get_certification_intelligence,
 )
+from app.services.compliance_intelligence_service import (
+    get_compliance_intelligence,
+)
 from app.services.knowledge_graph_service import get_standard_relationships
 from app.services.tender_gap_analysis_service import (
     analyze_tender_gaps,
@@ -1537,6 +1540,35 @@ def analyze_tender(
                 "Metadata-level procurement analysis; "
                 "not clause-level compliance verification.",
         }
+
+    # ========================================================
+    # STEP 5B — Enrich Primary Standard
+    # ========================================================
+
+    primary["source_authority"] = standard.source_authority
+    primary["source_type"] = standard.source_type
+    primary["source_document"] = standard.source_document
+    primary["source_url"] = standard.source_url
+
+    primary["version_intelligence"] = resolve_standard_version(
+        db,
+        standard,
+    )
+
+    primary["amendment_intelligence"] = get_amendment_history(
+        db,
+        standard.id,
+    )
+
+    primary["certification_intelligence"] = get_certification_intelligence(
+        db,
+        standard.id,
+    )
+
+    primary["compliance_intelligence"] = get_compliance_intelligence(
+        db,
+        standard,
+    )
 
     # ========================================================
     # STEP 6 — Initialize Gaps
