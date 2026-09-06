@@ -3,27 +3,59 @@ from pathlib import Path
 
 import faiss
 
-from app.services.reranking_service import rerank_results
-from app.services.embedding_service import generate_query_embedding
+from app.services.embedding_service import (
+    generate_query_embedding
+)
+
+from app.services.query_understanding_service import (
+    understand_query
+)
+
+from app.services.reranking_service import (
+    rerank_results
+)
 
 
-VECTOR_STORE_DIR = Path("vector_store")
+# =========================================================
+# VECTOR STORE
+# =========================================================
 
-INDEX_PATH = VECTOR_STORE_DIR / "standards.index"
-METADATA_PATH = VECTOR_STORE_DIR / "standards_metadata.json"
+VECTOR_STORE_DIR = Path(
+    "vector_store"
+)
+
+INDEX_PATH = (
+    VECTOR_STORE_DIR
+    / "standards.index"
+)
+
+METADATA_PATH = (
+    VECTOR_STORE_DIR
+    / "standards_metadata.json"
+)
 
 
 _index = None
 _metadata = None
 
 
+# =========================================================
+# LOAD VECTOR STORE
+# =========================================================
+
 def load_vector_store():
+
     global _index
     global _metadata
+
+    # -----------------------------------------------------
+    # FAISS INDEX
+    # -----------------------------------------------------
 
     if _index is None:
 
         if not INDEX_PATH.exists():
+
             raise FileNotFoundError(
                 "FAISS index not found. "
                 "Run init_vector_store first."
@@ -33,9 +65,14 @@ def load_vector_store():
             str(INDEX_PATH)
         )
 
+    # -----------------------------------------------------
+    # METADATA
+    # -----------------------------------------------------
+
     if _metadata is None:
 
         if not METADATA_PATH.exists():
+
             raise FileNotFoundError(
                 "Vector metadata not found."
             )
@@ -48,29 +85,79 @@ def load_vector_store():
 
             _metadata = json.load(file)
 
-    return _index, _metadata
+    return (
+        _index,
+        _metadata
+    )
 
+
+# =========================================================
+# SEMANTIC SEARCH
+# =========================================================
 
 def semantic_search(
     query: str,
     top_k: int = 5
 ):
 
-    index, metadata = load_vector_store()
+    # =====================================================
+    # 1. QUERY UNDERSTANDING
+    # =====================================================
 
-    query_embedding = generate_query_embedding(query)
+    query_intent = understand_query(
+        query
+    )
 
-    # Retrieve more candidates from FAISS
-    # before applying the reranker.
+    # =====================================================
+    # 2. LOAD VECTOR STORE
+    # =====================================================
+
+    index, metadata = (
+        load_vector_store()
+    )
+
+    # =====================================================
+    # 3. QUERY EMBEDDING
+    # =====================================================
+
+    query_embedding = (
+        generate_query_embedding(
+            query
+        )
+    )
+
+    # =====================================================
+    # 4. FAISS RETRIEVAL
+    # =====================================================
+
+    # Retrieve more candidates than requested.
+    #
+    # Example:
+    #
+    # top_k = 5
+    #
+    # FAISS retrieves 20 candidates.
+    #
+    # Reranker then selects the best 5.
+
     retrieval_k = min(
-        max(top_k * 4, 20),
+        max(
+            top_k * 4,
+            20
+        ),
         index.ntotal
     )
 
-    scores, indices = index.search(
-        query_embedding,
-        retrieval_k
+    scores, indices = (
+        index.search(
+            query_embedding,
+            retrieval_k
+        )
     )
+
+    # =====================================================
+    # 5. BUILD CANDIDATES
+    # =====================================================
 
     results = []
 
@@ -80,31 +167,65 @@ def semantic_search(
     ):
 
         if index_position < 0:
+
             continue
 
-        standard = metadata[index_position]
+        standard = metadata[
+            index_position
+        ]
 
         results.append(
             {
                 "rank": len(results) + 1,
+
                 "score": round(
                     float(score),
                     4
                 ),
-                "is_number": standard["is_number"],
-                "title": standard["title"],
-                "domain": standard["domain"],
-                "standard_type": standard["standard_type"],
-                "status": standard["status"],
-                "source_url": standard["source_url"],
+
+                "is_number": standard[
+                    "is_number"
+                ],
+
+                "title": standard[
+                    "title"
+                ],
+
+                "domain": standard[
+                    "domain"
+                ],
+
+                "standard_type": standard[
+                    "standard_type"
+                ],
+
+                "status": standard[
+                    "status"
+                ],
+
+                "source_url": standard[
+                    "source_url"
+                ],
             }
         )
 
-    # Rerank the retrieved candidates
+    # =====================================================
+    # 6. HYBRID RERANKING
+    # =====================================================
+
     reranked = rerank_results(
-        query,
-        results
+
+        query=query,
+
+        results=results,
+
+        query_intent=query_intent
     )
 
-    # Return only the requested number
-    return reranked[:top_k]
+    # =====================================================
+    # 7. TOP-K
+    # =====================================================
+
+    return reranked[
+        :top_k
+    ]
