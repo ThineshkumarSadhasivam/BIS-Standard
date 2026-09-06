@@ -47,3 +47,9 @@ class Standard(Base):
     back_populates="standard",
     cascade="all, delete-orphan"
 )
+
+    certifications = relationship(
+    "StandardCertification",
+    back_populates="standard",
+    cascade="all, delete-orphan"
+)

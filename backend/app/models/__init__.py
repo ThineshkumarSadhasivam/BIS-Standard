@@ -2,3 +2,4 @@ from app.models.standard import Standard
 from app.models.standard_relationship import StandardRelationship
 from app.models.standard_version_resolution import StandardVersionResolution
 from app.models.standard_amendment import StandardAmendment
+from app.models.standard_certification import StandardCertification

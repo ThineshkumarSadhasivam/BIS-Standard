@@ -16,6 +16,16 @@ from app.services.amendment_intelligence_service import (
     enrich_with_amendment_intelligence,
 )
 
+from app.services.certification_intelligence_service import (
+    get_certification_intelligence,
+    enrich_with_certification_intelligence,
+)
+
+from app.services.knowledge_graph_service import (
+    get_standard_relationships,
+    enrich_with_knowledge_graph,
+)
+
 from app.core.database import get_db
 from app.models.standard import Standard
 
@@ -74,7 +84,16 @@ def search_standards(
             db,
             enriched_result
         )
-
+        # Phase 3C
+        enriched_result = enrich_with_certification_intelligence(
+            db,
+            enriched_result
+        )
+        #Phase 4
+        enriched_result = enrich_with_knowledge_graph(
+            db,
+            enriched_result
+        )  
         enriched_results.append(
             enriched_result
         )
@@ -151,6 +170,42 @@ def get_standard_amendments(
     db: Session = Depends(get_db)
 ):
     result = get_amendment_history(
+        db,
+        standard_id
+    )
+
+    if result is None:
+        raise HTTPException(
+            status_code=404,
+            detail="Standard not found"
+        )
+
+    return result
+
+@router.get("/{standard_id}/certification")
+def get_standard_certification(
+    standard_id: int,
+    db: Session = Depends(get_db)
+):
+    result = get_certification_intelligence(
+        db,
+        standard_id
+    )
+
+    if result is None:
+        raise HTTPException(
+            status_code=404,
+            detail="Standard not found"
+        )
+
+    return result
+
+@router.get("/{standard_id}/relationships")
+def get_standard_relationships_api(
+    standard_id: int,
+    db: Session = Depends(get_db)
+):
+    result = get_standard_relationships(
         db,
         standard_id
     )
