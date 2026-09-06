@@ -1,17 +1,45 @@
+from typing import Dict, List, Optional
+
 from sqlalchemy.orm import Session
 
 from app.models.standard import Standard
 from app.models.standard_relationship import StandardRelationship
 
 
+# =========================================================
+# RELATIONSHIP CATEGORIES
+# =========================================================
+
+RELATIONSHIP_CATEGORIES = {
+    "TEST_REFERENCE": "test_references",
+    "MATERIAL_REFERENCE": "material_references",
+    "CONFORMITY_INPUT": "conformity_inputs",
+    "REFERENCED_STANDARD": "referenced_standards",
+}
+
+
+def get_relationship_category(
+    relationship_type: str
+) -> str:
+    """
+    Convert the database relationship type into a
+    frontend / procurement-analysis category.
+    """
+
+    return RELATIONSHIP_CATEGORIES.get(
+        relationship_type,
+        "other"
+    )
+
+
+# =========================================================
+# STANDARD RELATIONSHIPS
+# =========================================================
+
 def get_standard_relationships(
     db: Session,
     standard_id: int
-):
-    """
-    Retrieve all standards directly connected to
-    the requested standard.
-    """
+) -> Optional[Dict]:
 
     standard = (
         db.query(Standard)
@@ -40,9 +68,12 @@ def get_standard_relationships(
         .all()
     )
 
-    relationships = []
+    relationships: List[Dict] = []
 
-    # Relationships originating from this standard
+    # -----------------------------------------------------
+    # OUTGOING
+    # -----------------------------------------------------
+
     for relationship in outgoing:
 
         target = (
@@ -57,25 +88,35 @@ def get_standard_relationships(
         if not target:
             continue
 
-        relationships.append({
+        relationship_data = {
             "direction": "outgoing",
             "relationship_type": (
+                relationship.relationship_type
+            ),
+            "category": get_relationship_category(
                 relationship.relationship_type
             ),
             "related_standard": {
                 "id": target.id,
                 "is_number": target.is_number,
                 "title": target.title,
-                "status": target.status
+                "status": target.status,
             },
             "description": relationship.description,
             "source_document": (
                 relationship.source_document
             ),
-            "source_url": relationship.source_url
-        })
+            "source_url": relationship.source_url,
+        }
 
-    # Relationships pointing to this standard
+        relationships.append(
+            relationship_data
+        )
+
+    # -----------------------------------------------------
+    # INCOMING
+    # -----------------------------------------------------
+
     for relationship in incoming:
 
         source = (
@@ -90,42 +131,97 @@ def get_standard_relationships(
         if not source:
             continue
 
-        relationships.append({
+        relationship_data = {
             "direction": "incoming",
             "relationship_type": (
+                relationship.relationship_type
+            ),
+            "category": get_relationship_category(
                 relationship.relationship_type
             ),
             "related_standard": {
                 "id": source.id,
                 "is_number": source.is_number,
                 "title": source.title,
-                "status": source.status
+                "status": source.status,
             },
             "description": relationship.description,
             "source_document": (
                 relationship.source_document
             ),
-            "source_url": relationship.source_url
-        })
+            "source_url": relationship.source_url,
+        }
+
+        relationships.append(
+            relationship_data
+        )
+
+    # =====================================================
+    # CATEGORY GROUPING
+    # =====================================================
+
+    categories = {
+        "test_references": [],
+        "material_references": [],
+        "conformity_inputs": [],
+        "referenced_standards": [],
+        "other": [],
+    }
+
+    for relationship in relationships:
+
+        category = relationship["category"]
+
+        if category not in categories:
+            category = "other"
+
+        categories[category].append(
+            relationship
+        )
+
+    # =====================================================
+    # SUMMARY
+    # =====================================================
+
+    category_counts = {
+        category: len(items)
+        for category, items
+        in categories.items()
+    }
 
     return {
         "standard_id": standard.id,
         "is_number": standard.is_number,
         "title": standard.title,
-        "relationship_count": len(relationships),
-        "relationships": relationships
+
+        # Existing field — keep for compatibility
+        "relationship_count": len(
+            relationships
+        ),
+
+        # Existing relationship list
+        "relationships": relationships,
+
+        # New categorized representation
+        "categories": categories,
+
+        # Useful for dashboard/report generation
+        "category_counts": category_counts,
     }
 
 
+# =========================================================
+# SEARCH RESULT ENRICHMENT
+# =========================================================
+
 def enrich_with_knowledge_graph(
     db: Session,
-    result: dict
-):
-    """
-    Add directly related standards to a search result.
-    """
+    result: Dict
+) -> Dict:
 
-    is_number = result.get("is_number")
+    is_number = result.get(
+        "is_number"
+    )
 
     if not is_number:
         return result
@@ -147,6 +243,8 @@ def enrich_with_knowledge_graph(
     )
 
     if graph_info:
-        result["knowledge_graph"] = graph_info
+        result[
+            "knowledge_graph"
+        ] = graph_info
 
     return result
