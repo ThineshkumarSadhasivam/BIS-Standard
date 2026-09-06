@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 
@@ -12,6 +13,13 @@ from app.services.version_intelligence_service import (
 
 from app.core.database import get_db
 from app.models.standard import Standard
+=======
+from fastapi import APIRouter
+
+from app.schemas.standard import StandardSearchRequest
+from app.services.semantic_search_service import semantic_search
+from app.services.query_understanding_service import understand_query
+>>>>>>> ce325878d355594bcab249e5aff9c1d87ced2bc7
 
 
 router = APIRouter(
@@ -20,6 +28,7 @@ router = APIRouter(
 )
 
 
+<<<<<<< HEAD
 # ============================================================
 # STANDARD SEARCH
 # ============================================================
@@ -34,19 +43,32 @@ def search_standards(
     # 1. Understand the procurement query
     # --------------------------------------------------------
 
+=======
+@router.post("/search")
+def search_standards(
+    request: StandardSearchRequest
+):
+
+    # Understand the procurement query
+>>>>>>> ce325878d355594bcab249e5aff9c1d87ced2bc7
     intent = understand_query(
         request.query
     )
 
+<<<<<<< HEAD
     # --------------------------------------------------------
     # 2. Semantic retrieval + hybrid reranking
     # --------------------------------------------------------
 
+=======
+    # Semantic retrieval + hybrid reranking
+>>>>>>> ce325878d355594bcab249e5aff9c1d87ced2bc7
     results = semantic_search(
         query=request.query,
         top_k=request.top_k
     )
 
+<<<<<<< HEAD
     # --------------------------------------------------------
     # 3. Add Version Intelligence
     # --------------------------------------------------------
@@ -80,6 +102,16 @@ def search_standards(
 # QUERY UNDERSTANDING
 # ============================================================
 
+=======
+    return {
+        "query": request.query,
+        "intent": intent.model_dump(),
+        "count": len(results),
+        "results": results
+    }
+
+
+>>>>>>> ce325878d355594bcab249e5aff9c1d87ced2bc7
 @router.post("/understand")
 def understand_standard_query(
     request: StandardSearchRequest
@@ -92,6 +124,7 @@ def understand_standard_query(
     return {
         "query": request.query,
         "intent": intent.model_dump()
+<<<<<<< HEAD
     }
 
 
@@ -122,3 +155,6 @@ def get_standard_version(
         db,
         standard
     )
+=======
+    }
+>>>>>>> ce325878d355594bcab249e5aff9c1d87ced2bc7
