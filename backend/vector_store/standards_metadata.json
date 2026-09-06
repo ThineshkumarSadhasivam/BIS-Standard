@@ -1,0 +1,2828 @@
+[
+  {
+    "id": 1,
+    "is_number": "IS 269:2015",
+    "title": "Ordinary Portland cement - Specification",
+    "domain": "Civil Engineering / Cement",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.bis.gov.in/compendium-of-indian-standards/?lang=en"
+  },
+  {
+    "id": 2,
+    "is_number": "IS 455:2015",
+    "title": "Portland slag cement - Specification",
+    "domain": "Civil Engineering / Cement",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.bis.gov.in/compendium-of-indian-standards/?lang=en"
+  },
+  {
+    "id": 3,
+    "is_number": "IS 1489 (Part 1):2015",
+    "title": "Portland Pozzolana cement - Specification: Part 1 Flyash based",
+    "domain": "Civil Engineering / Cement",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.bis.gov.in/compendium-of-indian-standards/?lang=en"
+  },
+  {
+    "id": 4,
+    "is_number": "IS 1489 (Part 2):2015",
+    "title": "Portland Pozzolana cement - Specification: Part 2 Calcined clay based",
+    "domain": "Civil Engineering / Cement",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.bis.gov.in/compendium-of-indian-standards/?lang=en"
+  },
+  {
+    "id": 5,
+    "is_number": "IS 3466:1988",
+    "title": "Specification for masonry cement",
+    "domain": "Civil Engineering / Cement",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.bis.gov.in/compendium-of-indian-standards/?lang=en"
+  },
+  {
+    "id": 6,
+    "is_number": "IS 6452:1989",
+    "title": "Specification for high alumina cement for structural use",
+    "domain": "Civil Engineering / Cement",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.bis.gov.in/compendium-of-indian-standards/?lang=en"
+  },
+  {
+    "id": 7,
+    "is_number": "IS 6909:1990",
+    "title": "Specification for supersulphated cement",
+    "domain": "Civil Engineering / Cement",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.bis.gov.in/compendium-of-indian-standards/?lang=en"
+  },
+  {
+    "id": 8,
+    "is_number": "IS 8041:1990",
+    "title": "Specification for rapid hardening Portland cement",
+    "domain": "Civil Engineering / Cement",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.bis.gov.in/compendium-of-indian-standards/?lang=en"
+  },
+  {
+    "id": 9,
+    "is_number": "IS 8042:2015",
+    "title": "White Portland cement - Specification",
+    "domain": "Civil Engineering / Cement",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.bis.gov.in/compendium-of-indian-standards/?lang=en"
+  },
+  {
+    "id": 10,
+    "is_number": "IS 8043:1991",
+    "title": "Specification for hydrophobic Portland cement",
+    "domain": "Civil Engineering / Cement",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.bis.gov.in/compendium-of-indian-standards/?lang=en"
+  },
+  {
+    "id": 11,
+    "is_number": "IS 8229:1986",
+    "title": "Specification for Oil-well Cement",
+    "domain": "Civil Engineering / Cement",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.bis.gov.in/compendium-of-indian-standards/?lang=en"
+  },
+  {
+    "id": 12,
+    "is_number": "IS 12330:1988",
+    "title": "Specification for sulphate resisting Portland cement",
+    "domain": "Civil Engineering / Cement",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.bis.gov.in/compendium-of-indian-standards/?lang=en"
+  },
+  {
+    "id": 13,
+    "is_number": "IS 12600:1989",
+    "title": "Specification for low heat Portland cement",
+    "domain": "Civil Engineering / Cement",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.bis.gov.in/compendium-of-indian-standards/?lang=en"
+  },
+  {
+    "id": 14,
+    "is_number": "IS 16415:2015",
+    "title": "Composite cement - Specification",
+    "domain": "Civil Engineering / Cement",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.bis.gov.in/compendium-of-indian-standards/?lang=en"
+  },
+  {
+    "id": 15,
+    "is_number": "IS 16993:2018",
+    "title": "Microfine ordinary Portland cement - Specification",
+    "domain": "Civil Engineering / Cement",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.bis.gov.in/compendium-of-indian-standards/?lang=en"
+  },
+  {
+    "id": 16,
+    "is_number": "IS 18189:2023",
+    "title": "Portland calcined clay limestone cement - Specification",
+    "domain": "Civil Engineering / Cement",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.bis.gov.in/compendium-of-indian-standards/?lang=en"
+  },
+  {
+    "id": 17,
+    "is_number": "IS 4031 (Part 1):1996",
+    "title": "Methods of physical tests for hydraulic cement: Part 1 Determination of fineness by dry sieving",
+    "domain": "Civil Engineering / Cement",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.bis.gov.in/compendium-of-indian-standards/?lang=en"
+  },
+  {
+    "id": 18,
+    "is_number": "IS 4031 (Part 2):1999",
+    "title": "Methods of physical tests for hydraulic cement: Part 2 Determination of fineness by Blaine air permeability method",
+    "domain": "Civil Engineering / Cement",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.bis.gov.in/compendium-of-indian-standards/?lang=en"
+  },
+  {
+    "id": 19,
+    "is_number": "IS 4031 (Part 3):1988",
+    "title": "Methods of physical tests for hydraulic cement: Part 3 Determination of soundness",
+    "domain": "Civil Engineering / Cement",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.bis.gov.in/compendium-of-indian-standards/?lang=en"
+  },
+  {
+    "id": 20,
+    "is_number": "IS 4031 (Part 4):1988",
+    "title": "Methods of physical tests for hydraulic cement: Part 4 Determination of consistency of standard cement paste",
+    "domain": "Civil Engineering / Cement",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.bis.gov.in/compendium-of-indian-standards/?lang=en"
+  },
+  {
+    "id": 21,
+    "is_number": "IS 4031 (Part 5):1988",
+    "title": "Methods of physical tests for hydraulic cement: Part 5 Determination of initial and final setting times",
+    "domain": "Civil Engineering / Cement",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.bis.gov.in/compendium-of-indian-standards/?lang=en"
+  },
+  {
+    "id": 22,
+    "is_number": "IS 4031 (Part 6):1988",
+    "title": "Methods of physical tests for hydraulic cement: Part 6 Determination of compressive strength of hydraulic cement other than masonry cement",
+    "domain": "Civil Engineering / Cement",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.bis.gov.in/compendium-of-indian-standards/?lang=en"
+  },
+  {
+    "id": 23,
+    "is_number": "IS 4031 (Part 7):1988",
+    "title": "Methods of physical tests for hydraulic cement: Part 7 Determination of compressive strength of masonry cement",
+    "domain": "Civil Engineering / Cement",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.bis.gov.in/compendium-of-indian-standards/?lang=en"
+  },
+  {
+    "id": 24,
+    "is_number": "IS 4031 (Part 8):1988",
+    "title": "Methods of physical tests for hydraulic cement: Part 8 Determination of transverse and compressive strength of plastic mortar using prism",
+    "domain": "Civil Engineering / Cement",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.bis.gov.in/compendium-of-indian-standards/?lang=en"
+  },
+  {
+    "id": 25,
+    "is_number": "IS 4031 (Part 9):1988",
+    "title": "Methods of physical tests for hydraulic cement: Part 9 Determination of heat of hydration",
+    "domain": "Civil Engineering / Cement",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.bis.gov.in/compendium-of-indian-standards/?lang=en"
+  },
+  {
+    "id": 26,
+    "is_number": "IS 4031 (Part 10):1988",
+    "title": "Methods of physical tests for hydraulic cement: Part 10 Determination of drying shrinkage",
+    "domain": "Civil Engineering / Cement",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.bis.gov.in/compendium-of-indian-standards/?lang=en"
+  },
+  {
+    "id": 27,
+    "is_number": "IS 4031 (Part 11):1988",
+    "title": "Methods of physical tests for hydraulic cement: Part 11 Determination of density",
+    "domain": "Civil Engineering / Cement",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.bis.gov.in/compendium-of-indian-standards/?lang=en"
+  },
+  {
+    "id": 28,
+    "is_number": "IS 4031 (Part 12):1988",
+    "title": "Methods of physical tests for hydraulic cement: Part 12 Determination of air content of hydraulic cement mortar",
+    "domain": "Civil Engineering / Cement",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.bis.gov.in/compendium-of-indian-standards/?lang=en"
+  },
+  {
+    "id": 29,
+    "is_number": "IS 4031 (Part 13):1988",
+    "title": "Methods of physical tests for hydraulic cement: Part 13 Measurement of water retentivity of masonry cement",
+    "domain": "Civil Engineering / Cement",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.bis.gov.in/compendium-of-indian-standards/?lang=en"
+  },
+  {
+    "id": 30,
+    "is_number": "IS 4031 (Part 14):1989",
+    "title": "Hydraulic cement - Methods of physical tests: Part 14 Determination of false set",
+    "domain": "Civil Engineering / Cement",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.bis.gov.in/compendium-of-indian-standards/?lang=en"
+  },
+  {
+    "id": 31,
+    "is_number": "IS 4031 (Part 15):1991",
+    "title": "Methods of physical tests for hydraulic cement: Part 15 Determination of fineness by wet sieving",
+    "domain": "Civil Engineering / Cement",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.bis.gov.in/compendium-of-indian-standards/?lang=en"
+  },
+  {
+    "id": 32,
+    "is_number": "IS 4032:1985",
+    "title": "Method of chemical analysis of hydraulic cement",
+    "domain": "Civil Engineering / Cement",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.bis.gov.in/compendium-of-indian-standards/?lang=en"
+  },
+  {
+    "id": 33,
+    "is_number": "IS 12423:1988",
+    "title": "Method for colorimetric analysis of hydraulic cement",
+    "domain": "Civil Engineering / Cement",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.bis.gov.in/compendium-of-indian-standards/?lang=en"
+  },
+  {
+    "id": 34,
+    "is_number": "IS 12803:1989",
+    "title": "Methods of analysis of hydraulic cement by X-ray fluorescence spectrometer",
+    "domain": "Civil Engineering / Cement",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.bis.gov.in/compendium-of-indian-standards/?lang=en"
+  },
+  {
+    "id": 35,
+    "is_number": "IS 12813:1989",
+    "title": "Method of analysis of hydraulic cement by atomic absorption spectrophotometer",
+    "domain": "Civil Engineering / Cement",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.bis.gov.in/compendium-of-indian-standards/?lang=en"
+  },
+  {
+    "id": 36,
+    "is_number": "IS 456:2000",
+    "title": "Plain and reinforced concrete - Code of practice",
+    "domain": "Civil Engineering / Concrete",
+    "standard_type": "Code of Practice",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.bis.gov.in/compendium-of-indian-standards/?lang=en"
+  },
+  {
+    "id": 37,
+    "is_number": "IS 383:2016",
+    "title": "Coarse and Fine Aggregate for Concrete - Specification",
+    "domain": "Civil Engineering / Concrete",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.bis.gov.in/compendium-of-indian-standards/?lang=en"
+  },
+  {
+    "id": 38,
+    "is_number": "IS 10262:2019",
+    "title": "Concrete Mix Proportioning - Guidelines",
+    "domain": "Civil Engineering / Concrete",
+    "standard_type": "Guidelines",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.bis.gov.in/compendium-of-indian-standards/?lang=en"
+  },
+  {
+    "id": 39,
+    "is_number": "IS 1786:2008",
+    "title": "High Strength Deformed Steel Bars and Wires for Concrete Reinforcement - Specification",
+    "domain": "Civil Engineering / Reinforcement",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.bis.gov.in/compendium-of-indian-standards/?lang=en"
+  },
+  {
+    "id": 40,
+    "is_number": "IS 2062:2011",
+    "title": "Hot rolled medium and high tensile structural steel - Specification",
+    "domain": "Metallurgy / Structural Steel",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 41,
+    "is_number": "IS 2185 (Part 3)",
+    "title": "Concrete masonry units - Part 3 Autoclaved cellular aerated concrete blocks",
+    "domain": "Civil Engineering / Masonry",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.bis.gov.in/compendium-of-indian-standards/?lang=en"
+  },
+  {
+    "id": 42,
+    "is_number": "IS 15658:2021",
+    "title": "Concrete Paving Blocks - Specification",
+    "domain": "Civil Engineering / Pavements",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.bis.gov.in/compendium-of-indian-standards/?lang=en"
+  },
+  {
+    "id": 43,
+    "is_number": "IS 16777:2019",
+    "title": "Code of practice for laying interlocking concrete paving blocks",
+    "domain": "Civil Engineering / Pavements",
+    "standard_type": "Code of Practice",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.bis.gov.in/compendium-of-indian-standards/?lang=en"
+  },
+  {
+    "id": 44,
+    "is_number": "IS 18889:2024",
+    "title": "Precast concrete paving flags - Specification",
+    "domain": "Civil Engineering / Pavements",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.bis.gov.in/compendium-of-indian-standards/?lang=en"
+  },
+  {
+    "id": 45,
+    "is_number": "IS 18894:2024",
+    "title": "Precast concrete paving grids and grass pavers",
+    "domain": "Civil Engineering / Pavements",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.bis.gov.in/compendium-of-indian-standards/?lang=en"
+  },
+  {
+    "id": 46,
+    "is_number": "IS 800:2007",
+    "title": "General construction in steel - Code of practice",
+    "domain": "Civil Engineering / Structural Steel",
+    "standard_type": "Code of Practice",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.bis.gov.in/compendium-of-indian-standards/?lang=en"
+  },
+  {
+    "id": 47,
+    "is_number": "IS 875 (Part 1):1987",
+    "title": "Code of practice for design loads - Part 1 dead loads",
+    "domain": "Civil Engineering / Structural Design",
+    "standard_type": "Code of Practice",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.bis.gov.in/compendium-of-indian-standards/?lang=en"
+  },
+  {
+    "id": 48,
+    "is_number": "IS 875 (Part 2):1987",
+    "title": "Code of practice for design loads - Part 2 imposed loads",
+    "domain": "Civil Engineering / Structural Design",
+    "standard_type": "Code of Practice",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.bis.gov.in/compendium-of-indian-standards/?lang=en"
+  },
+  {
+    "id": 49,
+    "is_number": "IS 875 (Part 3):2015",
+    "title": "Design Loads other than Earthquake - Part 3 Wind Loads",
+    "domain": "Civil Engineering / Structural Design",
+    "standard_type": "Code of Practice",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.bis.gov.in/compendium-of-indian-standards/?lang=en"
+  },
+  {
+    "id": 50,
+    "is_number": "IS 1893 (Part 1):2016",
+    "title": "Criteria for earthquake resistant design of structures - Part 1 General provisions",
+    "domain": "Civil Engineering / Earthquake Engineering",
+    "standard_type": "Code of Practice",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.bis.gov.in/compendium-of-indian-standards/?lang=en"
+  },
+  {
+    "id": 51,
+    "is_number": "IS 13920:2016",
+    "title": "Ductile design and detailing of reinforced concrete structures subjected to seismic forces - Code of practice",
+    "domain": "Civil Engineering / Earthquake Engineering",
+    "standard_type": "Code of Practice",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.bis.gov.in/compendium-of-indian-standards/?lang=en"
+  },
+  {
+    "id": 52,
+    "is_number": "IS 1892:2021",
+    "title": "Subsurface investigation for foundations - Code of practice",
+    "domain": "Civil Engineering / Geotechnical",
+    "standard_type": "Code of Practice",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.bis.gov.in/compendium-of-indian-standards/?lang=en"
+  },
+  {
+    "id": 53,
+    "is_number": "IS 2720 (Part 13):1986",
+    "title": "Methods of test for soils: Part 13 Direct shear test",
+    "domain": "Civil Engineering / Soil Testing",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.bis.gov.in/compendium-of-indian-standards/?lang=en"
+  },
+  {
+    "id": 54,
+    "is_number": "IS 4991:1968",
+    "title": "Criteria for blast resistant design of structures for explosions above ground",
+    "domain": "Civil Engineering / Structural Safety",
+    "standard_type": "Code of Practice",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.bis.gov.in/compendium-of-indian-standards/?lang=en"
+  },
+  {
+    "id": 55,
+    "is_number": "IS 11592:2000",
+    "title": "Selection and design of belt conveyors - Code of practice",
+    "domain": "Mechanical / Material Handling",
+    "standard_type": "Code of Practice",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 56,
+    "is_number": "IS 2026 (Part 1):2011",
+    "title": "Power Transformers: Part 1 General",
+    "domain": "Electrical / Transformers",
+    "standard_type": "Product Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-15-17.pdf"
+  },
+  {
+    "id": 57,
+    "is_number": "IS 2026 (Part 2):2010",
+    "title": "Power transformers: Part 2 Temperature rise",
+    "domain": "Electrical / Transformers",
+    "standard_type": "Test/Technical Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-15-17.pdf"
+  },
+  {
+    "id": 58,
+    "is_number": "IS 2026 (Part 3):2018",
+    "title": "Power transformers: Part 3 Insulation levels, dielectric tests and external clearances in air",
+    "domain": "Electrical / Transformers",
+    "standard_type": "Test/Technical Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-15-17.pdf"
+  },
+  {
+    "id": 59,
+    "is_number": "IS 2026 (Part 5):2011",
+    "title": "Power Transformers Part 5 Ability to Withstand Short Circuit",
+    "domain": "Electrical / Transformers",
+    "standard_type": "Technical Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-15-17.pdf"
+  },
+  {
+    "id": 60,
+    "is_number": "IS 2026 (Part 6):2017",
+    "title": "Power Transformers Part 6 Reactors",
+    "domain": "Electrical / Transformers",
+    "standard_type": "Technical Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-15-17.pdf"
+  },
+  {
+    "id": 61,
+    "is_number": "IS 2026 (Part 7):2009",
+    "title": "Power transformers: Part 7 Loading guide for oil-immersed power transformers",
+    "domain": "Electrical / Transformers",
+    "standard_type": "Application Guide",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-15-17.pdf"
+  },
+  {
+    "id": 62,
+    "is_number": "IS 2026 (Part 8):2009",
+    "title": "Power transformers: Part 8 Application guide",
+    "domain": "Electrical / Transformers",
+    "standard_type": "Application Guide",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-15-17.pdf"
+  },
+  {
+    "id": 63,
+    "is_number": "IS 2026 (Part 10):2025",
+    "title": "Power transformers: Part 10 Determination of sound levels",
+    "domain": "Electrical / Transformers",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-15-17.pdf"
+  },
+  {
+    "id": 64,
+    "is_number": "IS 2026 (Part 11):2021",
+    "title": "Power Transformers: Part 11 Dry-Type Power Transformers",
+    "domain": "Electrical / Transformers",
+    "standard_type": "Product Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-15-17.pdf"
+  },
+  {
+    "id": 65,
+    "is_number": "IS 2026 (Part 14):2018",
+    "title": "Power Transformers: Part 14 Liquid Immersed Power Transformers using high-temperature insulation materials",
+    "domain": "Electrical / Transformers",
+    "standard_type": "Product Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-15-17.pdf"
+  },
+  {
+    "id": 66,
+    "is_number": "IS 2026 (Part 15):2018",
+    "title": "Power Transformers: Part 15 Gas Filled Power Transformers",
+    "domain": "Electrical / Transformers",
+    "standard_type": "Product Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-15-17.pdf"
+  },
+  {
+    "id": 67,
+    "is_number": "IS 2026 (Part 16):2023",
+    "title": "Power Transformers: Part 16 Transformers for wind turbine applications",
+    "domain": "Electrical / Transformers",
+    "standard_type": "Product Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-15-17.pdf"
+  },
+  {
+    "id": 68,
+    "is_number": "IS 2026 (Part 18):2018",
+    "title": "Power Transformers Part 18 Measurement of Frequency Response",
+    "domain": "Electrical / Transformers",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-15-17.pdf"
+  },
+  {
+    "id": 69,
+    "is_number": "IS 2026 (Part 19):2018",
+    "title": "Power Transformers Part 19 Rules for the Determination of Uncertainties in the Measurement of the Losses",
+    "domain": "Electrical / Transformers",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-15-17.pdf"
+  },
+  {
+    "id": 70,
+    "is_number": "IS 1180 (Part 1):2014",
+    "title": "Outdoor/Indoor Type Oil Immersed Distribution Transformers up to 2500 kVA, 33 kV - Part 1 Mineral Oil Immersed",
+    "domain": "Electrical / Transformers",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-15-17.pdf"
+  },
+  {
+    "id": 71,
+    "is_number": "IS 1180 (Part 3):2021",
+    "title": "Outdoor/Indoor Type Liquid Immersed Distribution Transformers - Part 3 Natural/Synthetic Organic Ester Liquid Immersed",
+    "domain": "Electrical / Transformers",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-15-17.pdf"
+  },
+  {
+    "id": 72,
+    "is_number": "IS 10028 (Part 1):1985",
+    "title": "Code of practice for selection, installation and maintenance of transformers: Part 1 Selection",
+    "domain": "Electrical / Transformers",
+    "standard_type": "Code of Practice",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-15-17.pdf"
+  },
+  {
+    "id": 73,
+    "is_number": "IS 10028 (Part 2):1981",
+    "title": "Code of practice for selection, installation and maintenance of transformers: Part 2 Installation",
+    "domain": "Electrical / Transformers",
+    "standard_type": "Code of Practice",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-15-17.pdf"
+  },
+  {
+    "id": 74,
+    "is_number": "IS 10028 (Part 3):1981",
+    "title": "Code of practice for selection, installation and maintenance of transformers: Part 3 Maintenance",
+    "domain": "Electrical / Transformers",
+    "standard_type": "Code of Practice",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-15-17.pdf"
+  },
+  {
+    "id": 75,
+    "is_number": "IS 18284:2023",
+    "title": "Repair of Distribution Transformers - Code of Practice",
+    "domain": "Electrical / Transformers",
+    "standard_type": "Code of Practice",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-15-17.pdf"
+  },
+  {
+    "id": 76,
+    "is_number": "IS 18445:2024",
+    "title": "Guide for the Application, Specification and Testing of Phase Shifting Transformers",
+    "domain": "Electrical / Transformers",
+    "standard_type": "Guideline",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-15-17.pdf"
+  },
+  {
+    "id": 77,
+    "is_number": "IS 694:2010",
+    "title": "PVC insulated unsheathed and sheathed cables/cords with rigid and flexible conductor up to 1100 V",
+    "domain": "Electrical / Cables",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 78,
+    "is_number": "IS 9968 (Part 1):1988",
+    "title": "Specification for elastomer insulated cables: Part 1 for working voltages up to and including 1100 volts",
+    "domain": "Electrical / Cables",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 79,
+    "is_number": "IS 17048:2018",
+    "title": "Halogen free flame retardant cables for working voltages up to and including 1100 Volts - Specification",
+    "domain": "Electrical / Cables",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 80,
+    "is_number": "IS 732:2019",
+    "title": "Code of practice for electrical wiring installations",
+    "domain": "Electrical / Installations",
+    "standard_type": "Code of Practice",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 81,
+    "is_number": "IS 3854",
+    "title": "Switches for domestic and similar purposes - Specification",
+    "domain": "Electrical / Switchgear",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 82,
+    "is_number": "IS 9537 (Part 3)",
+    "title": "Conduits for electrical installations - Part 3",
+    "domain": "Electrical / Installations",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 83,
+    "is_number": "IS 616:2017",
+    "title": "Audio, video and similar electronic apparatus - Safety requirements",
+    "domain": "Electronics / AV Equipment",
+    "standard_type": "Safety Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 84,
+    "is_number": "IS 302 (Part 1)",
+    "title": "Safety of household and similar electrical appliances - Part 1 General requirements",
+    "domain": "Electrical Appliances",
+    "standard_type": "Safety Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 85,
+    "is_number": "IS 4250:2025",
+    "title": "Electric Food-Mixers (Liquidizers and Grinders) and Centrifugal Juicers - Specification",
+    "domain": "Electrical Appliances",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 86,
+    "is_number": "IS 2082:2018",
+    "title": "Stationary storage type electric water heaters - Specification",
+    "domain": "Electrical Appliances",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 87,
+    "is_number": "IS 3177:2020",
+    "title": "Electric Overhead Travelling Crane and Gantry Crane for all Applications - Code of Practice",
+    "domain": "Mechanical / Cranes",
+    "standard_type": "Code of Practice",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 88,
+    "is_number": "IS 11501:2023",
+    "title": "Engine monoset pumps for clear, cold water for agricultural purposes - Specification",
+    "domain": "Mechanical / Pumps",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://services.bis.gov.in/tmp/compendium_2025-06-02-05-22-06.pdf"
+  },
+  {
+    "id": 89,
+    "is_number": "IS 12225:2025",
+    "title": "Centrifugal jet pumps - Specification",
+    "domain": "Mechanical / Pumps",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://services.bis.gov.in/tmp/compendium_2025-06-02-05-22-06.pdf"
+  },
+  {
+    "id": 90,
+    "is_number": "IS 12469:2019",
+    "title": "Specification of pumps for stationary firefighting installations",
+    "domain": "Mechanical / Pumps",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://services.bis.gov.in/tmp/compendium_2025-06-02-05-22-06.pdf"
+  },
+  {
+    "id": 91,
+    "is_number": "IS 14220:2018",
+    "title": "Openwell submersible pumpsets - Specification",
+    "domain": "Mechanical / Pumps",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://services.bis.gov.in/tmp/compendium_2025-06-02-05-22-06.pdf"
+  },
+  {
+    "id": 92,
+    "is_number": "IS 17018 (Part 1):2022",
+    "title": "Solar photovoltaic water pumping systems Part 1 Centrifugal pumps specification",
+    "domain": "Renewable Energy / Pumps",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://services.bis.gov.in/tmp/compendium_2025-06-02-05-22-06.pdf"
+  },
+  {
+    "id": 93,
+    "is_number": "IS 1710:2021",
+    "title": "Vertical turbine pumps - Specification",
+    "domain": "Mechanical / Pumps",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://services.bis.gov.in/tmp/compendium_2025-06-02-05-22-06.pdf"
+  },
+  {
+    "id": 94,
+    "is_number": "IS 6595 (Part 1):2023",
+    "title": "Horizontal centrifugal pumps for clear, cold water - Part 1 Agricultural and rural water supply purposes",
+    "domain": "Mechanical / Pumps",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://services.bis.gov.in/tmp/compendium_2025-06-02-05-22-06.pdf"
+  },
+  {
+    "id": 95,
+    "is_number": "IS 6595 (Part 2):2023",
+    "title": "Horizontal centrifugal pump for clear, cold water - Part 2 General purpose",
+    "domain": "Mechanical / Pumps",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://services.bis.gov.in/tmp/compendium_2025-06-02-05-22-06.pdf"
+  },
+  {
+    "id": 96,
+    "is_number": "IS 8034:2018",
+    "title": "Submersible pumpsets - Specification",
+    "domain": "Mechanical / Pumps",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://services.bis.gov.in/tmp/compendium_2025-06-02-05-22-06.pdf"
+  },
+  {
+    "id": 97,
+    "is_number": "IS 9079:2018",
+    "title": "Monoset pumps for clear, cold water for agricultural and water supply purposes - Specification",
+    "domain": "Mechanical / Pumps",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://services.bis.gov.in/tmp/compendium_2025-06-02-05-22-06.pdf"
+  },
+  {
+    "id": 98,
+    "is_number": "IS 8472:2019",
+    "title": "Centrifugal regenerative pumps for clear, cold water - Specification",
+    "domain": "Mechanical / Pumps",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://services.bis.gov.in/tmp/compendium_2025-06-02-05-22-06.pdf"
+  },
+  {
+    "id": 99,
+    "is_number": "IS 10805:2022",
+    "title": "Foot-Valves, Reflux Valves or Non-Return Valves and Bore Valves to be Used in Suction Lines of Agricultural Pumping Systems - Specification",
+    "domain": "Mechanical / Pumps",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://services.bis.gov.in/tmp/compendium_2025-06-02-05-22-06.pdf"
+  },
+  {
+    "id": 100,
+    "is_number": "IS 15657:2021",
+    "title": "Centrifugal pumps for petroleum, petrochemical and natural gas industries",
+    "domain": "Mechanical / Pumps",
+    "standard_type": "Product Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://services.bis.gov.in/tmp/compendium_2025-06-02-05-22-06.pdf"
+  },
+  {
+    "id": 101,
+    "is_number": "IS 5600:2002",
+    "title": "Pumps - Sewage and drainage - Specification",
+    "domain": "Mechanical / Pumps",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://services.bis.gov.in/tmp/compendium_2025-06-02-05-22-06.pdf"
+  },
+  {
+    "id": 102,
+    "is_number": "IS 8418:1999",
+    "title": "Pumps - Centrifugal self priming - Specification",
+    "domain": "Mechanical / Pumps",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://services.bis.gov.in/tmp/compendium_2025-06-02-05-22-06.pdf"
+  },
+  {
+    "id": 103,
+    "is_number": "IS 9201:1987",
+    "title": "Specification for pumps for handling slurry",
+    "domain": "Mechanical / Pumps",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://services.bis.gov.in/tmp/compendium_2025-06-02-05-22-06.pdf"
+  },
+  {
+    "id": 104,
+    "is_number": "IS 10981:1983",
+    "title": "Code of acceptance test for centrifugal, mixed flow and axial pumps - class B",
+    "domain": "Mechanical / Pumps",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://services.bis.gov.in/tmp/compendium_2025-06-02-05-22-06.pdf"
+  },
+  {
+    "id": 105,
+    "is_number": "IS 11346:2002",
+    "title": "Tests for agricultural and water supply pumps - code of acceptance",
+    "domain": "Mechanical / Pumps",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://services.bis.gov.in/tmp/compendium_2025-06-02-05-22-06.pdf"
+  },
+  {
+    "id": 106,
+    "is_number": "IS 13538:1993",
+    "title": "Centrifugal, mixed flow and axial pumps - code for hydraulic performance tests - precision class",
+    "domain": "Mechanical / Pumps",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://services.bis.gov.in/tmp/compendium_2025-06-02-05-22-06.pdf"
+  },
+  {
+    "id": 107,
+    "is_number": "IS 17429:2020",
+    "title": "Solar photovoltaic water pumping systems - testing procedure - guidelines",
+    "domain": "Renewable Energy / Pumps",
+    "standard_type": "Test Guideline",
+    "status": "Active/Current candidate",
+    "source_url": "https://services.bis.gov.in/tmp/compendium_2025-06-02-05-22-06.pdf"
+  },
+  {
+    "id": 108,
+    "is_number": "IS 10500:2012",
+    "title": "Drinking Water - Specification",
+    "domain": "Water Quality",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 109,
+    "is_number": "IS 14543:2024",
+    "title": "Packaged drinking water other than packaged natural mineral water",
+    "domain": "Water Quality",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 110,
+    "is_number": "IS 17482:2020",
+    "title": "Drinking Water Supply Management System - Requirements for Piped Drinking Water Supply Service",
+    "domain": "Water Utilities",
+    "standard_type": "Management Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 111,
+    "is_number": "IS 1110:2023",
+    "title": "Ferrosilicon - Specification",
+    "domain": "Metallurgy / Ferroalloys",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 112,
+    "is_number": "IS 1170:1992",
+    "title": "Ferrochromium - Specification",
+    "domain": "Metallurgy / Ferroalloys",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 113,
+    "is_number": "IS 1171:2011",
+    "title": "Ferromanganese - Specification",
+    "domain": "Metallurgy / Ferroalloys",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 114,
+    "is_number": "IS 12908:1990",
+    "title": "Ferroaluminium - Specification",
+    "domain": "Metallurgy / Ferroalloys",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 115,
+    "is_number": "IS 13054:1991",
+    "title": "Quartzite/quartz for the production of ferroalloys - Specification",
+    "domain": "Metallurgy / Ferroalloys",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 116,
+    "is_number": "IS 1470:2013",
+    "title": "Silicomanganese - Specification",
+    "domain": "Metallurgy / Ferroalloys",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 117,
+    "is_number": "IS 2549:2023",
+    "title": "Processed ferrous scrap - Code for classification",
+    "domain": "Metallurgy / Steel",
+    "standard_type": "Classification Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 118,
+    "is_number": "IS 14650:2023",
+    "title": "Unalloyed and alloyed steel ingot and semi-finished products for re-rolling purposes",
+    "domain": "Metallurgy / Steel",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 119,
+    "is_number": "IS 6529:1996",
+    "title": "Stainless steel blooms billets and slabs for forging",
+    "domain": "Metallurgy / Steel",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 120,
+    "is_number": "IS 6911:2017",
+    "title": "Stainless steel plate, sheet and strip - Specification",
+    "domain": "Metallurgy / Stainless Steel",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 121,
+    "is_number": "IS 1079:2017",
+    "title": "Hot rolled carbon steel sheet, plate and strip - Specification",
+    "domain": "Metallurgy / Steel",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 122,
+    "is_number": "IS 1161:2014",
+    "title": "Steel tubes for structural purposes - Specification",
+    "domain": "Metallurgy / Steel Tubes",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 123,
+    "is_number": "IS 1239 (Part 1):2004",
+    "title": "Steel tubes, tubulars and other wrought steel fittings - Part 1 steel tubes",
+    "domain": "Metallurgy / Steel Tubes",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 124,
+    "is_number": "IS 3601:2006",
+    "title": "Steel tubes for mechanical and general engineering purposes - Specification",
+    "domain": "Metallurgy / Steel Tubes",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 125,
+    "is_number": "IS 2629:1985",
+    "title": "Recommended practice for hot-dip galvanizing of iron and steel",
+    "domain": "Metallurgy / Coatings",
+    "standard_type": "Code of Practice",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 126,
+    "is_number": "IS 2633:1986",
+    "title": "Method for testing uniformity of coating on zinc coated articles",
+    "domain": "Metallurgy / Coatings",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 127,
+    "is_number": "IS 6396:2023",
+    "title": "Steels - Determination of the depth of decarburization",
+    "domain": "Metallurgy / Testing",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 128,
+    "is_number": "IS 1501 (Part 1):2020",
+    "title": "Metallic Materials - Vickers Hardness Test Part 1 Test Method",
+    "domain": "Metallurgy / Testing",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 129,
+    "is_number": "IS 733:1983",
+    "title": "Specification for wrought aluminium and aluminium alloys bars, rods and sections for general engineering purposes",
+    "domain": "Metallurgy / Aluminium",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 130,
+    "is_number": "IS 734:1975",
+    "title": "Wrought aluminium and aluminium alloys forging stock and forgings",
+    "domain": "Metallurgy / Aluminium",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 131,
+    "is_number": "IS 736:1986",
+    "title": "Specification for wrought aluminium and aluminium alloys plate for general engineering purposes",
+    "domain": "Metallurgy / Aluminium",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 132,
+    "is_number": "IS 737:2008",
+    "title": "Wrought aluminium and aluminium alloys sheet and strip for general engineering purposes - Specification",
+    "domain": "Metallurgy / Aluminium",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 133,
+    "is_number": "IS 738:1994",
+    "title": "Specification for wrought aluminium and aluminium alloys drawn tube for general engineering purposes",
+    "domain": "Metallurgy / Aluminium",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 134,
+    "is_number": "IS 739:1992",
+    "title": "Wrought aluminium and aluminium alloys - Wire for general engineering purposes - Specification",
+    "domain": "Metallurgy / Aluminium",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 135,
+    "is_number": "IS 740:1977",
+    "title": "Specification for wrought aluminium and aluminium alloys rivet stock",
+    "domain": "Metallurgy / Aluminium",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 136,
+    "is_number": "IS 1254:2007",
+    "title": "Corrugated aluminium sheet",
+    "domain": "Metallurgy / Aluminium",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 137,
+    "is_number": "IS 1284:2024",
+    "title": "Wrought aluminium alloys bolt and screw stock - Specification",
+    "domain": "Metallurgy / Aluminium",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 138,
+    "is_number": "IS 1285:2002",
+    "title": "Wrought aluminium and aluminium alloys - Extruded round tube and hollow sections",
+    "domain": "Metallurgy / Aluminium",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 139,
+    "is_number": "IS 617",
+    "title": "Aluminium alloy ingots and castings - Specification",
+    "domain": "Metallurgy / Aluminium",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 140,
+    "is_number": "IS 4026",
+    "title": "Wrought aluminium and aluminium alloy rivet stock / related aluminium product standard",
+    "domain": "Metallurgy / Aluminium",
+    "standard_type": "Product Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 141,
+    "is_number": "IS 8519:2024",
+    "title": "Guide for Selection of Occupational Protective Clothing - Body Protection (Selection, Care, and Maintenance)",
+    "domain": "Occupational Safety / PPE",
+    "standard_type": "Guideline",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-05-28-03-19-26.pdf"
+  },
+  {
+    "id": 142,
+    "is_number": "IS 6994 (Part 1):2021",
+    "title": "Protective Gloves against Dangerous Chemicals and Micro-organisms - Terminology and performance requirements for chemical risks",
+    "domain": "Occupational Safety / PPE",
+    "standard_type": "Product/Test Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-05-28-03-19-26.pdf"
+  },
+  {
+    "id": 143,
+    "is_number": "IS 6994 (Part 2):2021",
+    "title": "Protective Gloves against Dangerous Chemicals and Micro-organisms - Determination of resistance to penetration",
+    "domain": "Occupational Safety / PPE",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-05-28-03-19-26.pdf"
+  },
+  {
+    "id": 144,
+    "is_number": "IS 6994 (Part 4):2021",
+    "title": "Protective Gloves against Dangerous Chemicals and Micro-organisms - Determination of resistance to degradation by chemicals",
+    "domain": "Occupational Safety / PPE",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-05-28-03-19-26.pdf"
+  },
+  {
+    "id": 145,
+    "is_number": "IS 6994 (Part 5):2021",
+    "title": "Protective Gloves against Dangerous Chemicals and Micro-organisms - Terminology and performance requirements for micro-organisms risks",
+    "domain": "Occupational Safety / PPE",
+    "standard_type": "Product/Test Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-05-28-03-19-26.pdf"
+  },
+  {
+    "id": 146,
+    "is_number": "IS 6994 (Part 6):2021",
+    "title": "Protective gloves against mechanical risks",
+    "domain": "Occupational Safety / PPE",
+    "standard_type": "Product/Test Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-05-28-03-19-26.pdf"
+  },
+  {
+    "id": 147,
+    "is_number": "IS 6994 (Part 7):2021",
+    "title": "Protective Gloves - General requirements and test methods",
+    "domain": "Occupational Safety / PPE",
+    "standard_type": "Product/Test Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-05-28-03-19-26.pdf"
+  },
+  {
+    "id": 148,
+    "is_number": "IS 15748:2022",
+    "title": "Protective Clothing - Clothing to Protect Against Heat and Flame - Minimum Performance Requirements",
+    "domain": "Occupational Safety / PPE",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-05-28-03-19-26.pdf"
+  },
+  {
+    "id": 149,
+    "is_number": "IS 16890:2024",
+    "title": "Textiles - Protective Clothing for Firefighters - Specification",
+    "domain": "Occupational Safety / PPE",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-05-28-03-19-26.pdf"
+  },
+  {
+    "id": 150,
+    "is_number": "IS 16874:2018",
+    "title": "Textiles - Protective Gloves for Firefighters - Specification",
+    "domain": "Occupational Safety / PPE",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-05-28-03-19-26.pdf"
+  },
+  {
+    "id": 151,
+    "is_number": "IS 15809:2017",
+    "title": "High visibility warning clothes - Specification",
+    "domain": "Occupational Safety / PPE",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-05-28-03-19-26.pdf"
+  },
+  {
+    "id": 152,
+    "is_number": "IS 18849:2024",
+    "title": "Textiles - Workwear for cement workers - Specification",
+    "domain": "Occupational Safety / PPE",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-05-28-03-19-26.pdf"
+  },
+  {
+    "id": 153,
+    "is_number": "IS 16655:2017",
+    "title": "Textiles - Protective clothing for use in welding and allied processes",
+    "domain": "Occupational Safety / PPE",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-05-28-03-19-26.pdf"
+  },
+  {
+    "id": 154,
+    "is_number": "IS 15298 (Part 1):2024",
+    "title": "Personal protective equipment - Part 1 Test methods for footwear",
+    "domain": "Occupational Safety / PPE",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-05-28-03-19-26.pdf"
+  },
+  {
+    "id": 155,
+    "is_number": "IS 15298 (Part 2):2024",
+    "title": "Personal protective equipment - Part 2 Safety footwear",
+    "domain": "Occupational Safety / PPE",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-05-28-03-19-26.pdf"
+  },
+  {
+    "id": 156,
+    "is_number": "IS 4151:2015",
+    "title": "Protective helmets for motorcycle riders",
+    "domain": "Occupational Safety / PPE",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-05-28-03-19-26.pdf"
+  },
+  {
+    "id": 157,
+    "is_number": "IS 2925:1984",
+    "title": "Specification for Industrial Safety Helmets",
+    "domain": "Occupational Safety / PPE",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-05-28-03-19-26.pdf"
+  },
+  {
+    "id": 158,
+    "is_number": "IS 1165:2022",
+    "title": "Whole milk powder - Specification",
+    "domain": "Food / Dairy",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 159,
+    "is_number": "IS 13334 (Part 1):2014",
+    "title": "Skimmed milk powder - Specification Part 1 Standard grade",
+    "domain": "Food / Dairy",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 160,
+    "is_number": "IS 13334 (Part 2):2014",
+    "title": "Skimmed milk powder - Specification Part 2 Extra grade",
+    "domain": "Food / Dairy",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 161,
+    "is_number": "IS 14542:1998",
+    "title": "Partly skimmed milk powder - Specification",
+    "domain": "Food / Dairy",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 162,
+    "is_number": "IS 17423:2020",
+    "title": "Medical Textiles - Coveralls for COVID-19 - Specification",
+    "domain": "Medical Textiles",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 163,
+    "is_number": "IS 17423:2021",
+    "title": "Medical Textiles - Bio-Protective Coveralls - Specification",
+    "domain": "Medical Textiles",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 164,
+    "is_number": "IS 4984",
+    "title": "Polyethylene pipes for water supply - Specification",
+    "domain": "Plastics / Pipes",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 165,
+    "is_number": "IS 4985",
+    "title": "Unplasticized PVC pipes for potable water supplies - Specification",
+    "domain": "Plastics / Pipes",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 166,
+    "is_number": "IS 12818",
+    "title": "Unplasticized PVC pipes for potable water supplies / related PVC pipe specification",
+    "domain": "Plastics / Pipes",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 167,
+    "is_number": "IS 14333",
+    "title": "High density polyethylene pipes for sewerage - Specification",
+    "domain": "Plastics / Pipes",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 168,
+    "is_number": "IS 14735",
+    "title": "PVC related product standard",
+    "domain": "Plastics / PVC",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 169,
+    "is_number": "IS 7834",
+    "title": "PVC related product standard",
+    "domain": "Plastics / PVC",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 170,
+    "is_number": "IS 15778",
+    "title": "Chlorinated polyvinyl chloride pipes for potable hot and cold water installations - Specification",
+    "domain": "Plastics / Pipes",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 171,
+    "is_number": "IS 13592:2013",
+    "title": "Unplasticized PVC pipes for soil and waste discharge system inside and outside buildings including ventilation and rain water system",
+    "domain": "Plastics / Pipes",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 172,
+    "is_number": "IS 17425",
+    "title": "PVC/HDPE pipe related product standard",
+    "domain": "Plastics / Pipes",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 173,
+    "is_number": "IS 303",
+    "title": "Plywood for general purposes - Specification",
+    "domain": "Building Materials / Wood",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 174,
+    "is_number": "IS 710",
+    "title": "Marine plywood - Specification",
+    "domain": "Building Materials / Wood",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 175,
+    "is_number": "IS 1659",
+    "title": "Block boards - Specification",
+    "domain": "Building Materials / Wood",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 176,
+    "is_number": "IS 2202",
+    "title": "Wooden flush door shutters - Specification",
+    "domain": "Building Materials / Wood",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 177,
+    "is_number": "IS 4990",
+    "title": "Plywood for concrete shuttering work - Specification",
+    "domain": "Building Materials / Wood",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 178,
+    "is_number": "IS 14587",
+    "title": "Wood related product standard",
+    "domain": "Building Materials / Wood",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 179,
+    "is_number": "IS 4246",
+    "title": "Domestic gas stoves for use with liquefied petroleum gases",
+    "domain": "Domestic Appliances / Gas",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 180,
+    "is_number": "IS 9873",
+    "title": "Safety of Toys",
+    "domain": "Consumer Products / Toys",
+    "standard_type": "Safety Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 181,
+    "is_number": "IS 15644",
+    "title": "Safety of toys / related toy safety requirements",
+    "domain": "Consumer Products / Toys",
+    "standard_type": "Safety Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 182,
+    "is_number": "IS 15844 (Part 1)",
+    "title": "Sports shoes - requirements",
+    "domain": "Footwear",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 183,
+    "is_number": "IS 15844 (Part 2)",
+    "title": "Footwear - related requirements",
+    "domain": "Footwear",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 184,
+    "is_number": "IS 15844 (Part 3)",
+    "title": "Footwear - related requirements",
+    "domain": "Footwear",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 185,
+    "is_number": "IS 6721:2023",
+    "title": "Footwear - shoes, sandals and slippers related requirements",
+    "domain": "Footwear",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 186,
+    "is_number": "IS 10748",
+    "title": "Footwear related product standard",
+    "domain": "Footwear",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 187,
+    "is_number": "IS 17043",
+    "title": "Shoes for general purposes",
+    "domain": "Footwear",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 188,
+    "is_number": "IS 1660",
+    "title": "Wrought and cast aluminium utensils",
+    "domain": "Household Products",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 189,
+    "is_number": "IS 14756",
+    "title": "Stainless steel utensils",
+    "domain": "Household Products",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 190,
+    "is_number": "IS 17659",
+    "title": "Insulated stainless steel bottles/flasks",
+    "domain": "Household Products",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 191,
+    "is_number": "IS 17803",
+    "title": "Insulated stainless steel bottles/flasks",
+    "domain": "Household Products",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 192,
+    "is_number": "IS 17526",
+    "title": "Insulated stainless steel bottles/flasks",
+    "domain": "Household Products",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 193,
+    "is_number": "IS/IEC 60034-1:2022",
+    "title": "Rotating electrical machines - Part 1 Rating and performance",
+    "domain": "Electrical / Motors",
+    "standard_type": "Product/Performance Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-07-45.pdf"
+  },
+  {
+    "id": 194,
+    "is_number": "IS 12615:2018",
+    "title": "Rotating electrical machines - efficiency related requirements",
+    "domain": "Electrical / Motors",
+    "standard_type": "Performance Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-07-45.pdf"
+  },
+  {
+    "id": 195,
+    "is_number": "IS 996:2009",
+    "title": "Electric motors - related product standard",
+    "domain": "Electrical / Motors",
+    "standard_type": "Product Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-07-45.pdf"
+  },
+  {
+    "id": 196,
+    "is_number": "IS 4665 (Part 1):2023",
+    "title": "Hand-held motor-operated electric tools - Part 1 General requirements",
+    "domain": "Electrical Tools",
+    "standard_type": "Safety Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-07-45.pdf"
+  },
+  {
+    "id": 197,
+    "is_number": "IS 4665 (Part 2/Sec 1):2023",
+    "title": "Hand-held motor-operated electric tools - Particular requirements for drills",
+    "domain": "Electrical Tools",
+    "standard_type": "Safety Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-07-45.pdf"
+  },
+  {
+    "id": 198,
+    "is_number": "IS 4665 (Part 2/Sec 2):2023",
+    "title": "Hand-held motor-operated electric tools - Particular requirements for screwdrivers and impact wrenches",
+    "domain": "Electrical Tools",
+    "standard_type": "Safety Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-07-45.pdf"
+  },
+  {
+    "id": 199,
+    "is_number": "IS 4665 (Part 2/Sec 3):2023",
+    "title": "Hand-held motor-operated electric tools - Particular requirements for grinders",
+    "domain": "Electrical Tools",
+    "standard_type": "Safety Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-07-45.pdf"
+  },
+  {
+    "id": 200,
+    "is_number": "IS 4665 (Part 2/Sec 5):2023",
+    "title": "Hand-held motor-operated electric tools - Particular requirements for circular saws",
+    "domain": "Electrical Tools",
+    "standard_type": "Safety Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-07-45.pdf"
+  },
+  {
+    "id": 201,
+    "is_number": "IS 4665 (Part 2/Sec 6):2023",
+    "title": "Hand-held motor-operated electric tools - Particular requirements for hammers",
+    "domain": "Electrical Tools",
+    "standard_type": "Safety Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-07-45.pdf"
+  },
+  {
+    "id": 202,
+    "is_number": "IS 4665 (Part 2/Sec 7):2023",
+    "title": "Hand-held motor-operated electric tools - Particular requirements for nibblers and shears",
+    "domain": "Electrical Tools",
+    "standard_type": "Safety Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-07-45.pdf"
+  },
+  {
+    "id": 203,
+    "is_number": "IS 9283:2024",
+    "title": "Motors for agricultural applications",
+    "domain": "Electrical / Agricultural Motors",
+    "standard_type": "Product Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-07-45.pdf"
+  },
+  {
+    "id": 204,
+    "is_number": "IS 7538:1996",
+    "title": "Agricultural motors - related standard",
+    "domain": "Electrical / Agricultural Motors",
+    "standard_type": "Product Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-07-45.pdf"
+  },
+  {
+    "id": 205,
+    "is_number": "IS 14582:2021",
+    "title": "Agricultural motors - related standard",
+    "domain": "Electrical / Agricultural Motors",
+    "standard_type": "Product Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-07-45.pdf"
+  },
+  {
+    "id": 206,
+    "is_number": "IS 14578:1999",
+    "title": "Specific application electric motors",
+    "domain": "Electrical / Motors",
+    "standard_type": "Product Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-07-45.pdf"
+  },
+  {
+    "id": 207,
+    "is_number": "IS 8151:2024",
+    "title": "Specific application electric motors",
+    "domain": "Electrical / Motors",
+    "standard_type": "Product Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-07-45.pdf"
+  },
+  {
+    "id": 208,
+    "is_number": "IS 18073:2023",
+    "title": "Specific application electric motors",
+    "domain": "Electrical / Motors",
+    "standard_type": "Product Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-07-45.pdf"
+  },
+  {
+    "id": 209,
+    "is_number": "IS 12642:1989",
+    "title": "Electrical carbon brushes - specification",
+    "domain": "Electrical / Motors",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-07-45.pdf"
+  },
+  {
+    "id": 210,
+    "is_number": "IS 13466:1992",
+    "title": "Electrical brushes - related standard",
+    "domain": "Electrical / Motors",
+    "standard_type": "Product Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-07-45.pdf"
+  },
+  {
+    "id": 211,
+    "is_number": "IS 13525:1992",
+    "title": "Electrical brushes - related standard",
+    "domain": "Electrical / Motors",
+    "standard_type": "Product Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-07-45.pdf"
+  },
+  {
+    "id": 212,
+    "is_number": "IS/IEC 60034-2-1:2024",
+    "title": "Rotating electrical machines - Part 2-1 Standard methods for determining losses and efficiency",
+    "domain": "Electrical / Motors",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-07-45.pdf"
+  },
+  {
+    "id": 213,
+    "is_number": "IS 4029:2010",
+    "title": "Rotating electrical machines - test related standard",
+    "domain": "Electrical / Motors",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-07-45.pdf"
+  },
+  {
+    "id": 214,
+    "is_number": "IS 9320:2025",
+    "title": "Electric motors - test related standard",
+    "domain": "Electrical / Motors",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-07-45.pdf"
+  },
+  {
+    "id": 215,
+    "is_number": "IS 7572:1974",
+    "title": "Electric motors - test related standard",
+    "domain": "Electrical / Motors",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-07-45.pdf"
+  },
+  {
+    "id": 216,
+    "is_number": "IS 12075:2024",
+    "title": "Rotating electrical machines - mechanical vibration related test methods",
+    "domain": "Electrical / Motors",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-07-45.pdf"
+  },
+  {
+    "id": 217,
+    "is_number": "IS 10138:2010",
+    "title": "Macroscopic methods for determination of non-metallic inclusion content in wrought steels",
+    "domain": "Metallurgy / Testing",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 218,
+    "is_number": "IS 11371:2022",
+    "title": "Method for Macroetch Testing, Inspection and Rating of Wrought Steel Products",
+    "domain": "Metallurgy / Testing",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 219,
+    "is_number": "IS 12037:2023",
+    "title": "Steel - Macrographic examination by sulphur print (Baumann method)",
+    "domain": "Metallurgy / Testing",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 220,
+    "is_number": "IS 12211:2024",
+    "title": "Tool Steels and Bearing Steels - Micrographic Method for Assessing the Distribution of Carbides",
+    "domain": "Metallurgy / Testing",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 221,
+    "is_number": "IS 12378:1988",
+    "title": "Method for macroetch test for titanium alloys",
+    "domain": "Metallurgy / Testing",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 222,
+    "is_number": "IS 12573:2010",
+    "title": "Method for macroetch test for wrought aluminium and aluminium alloy products",
+    "domain": "Metallurgy / Testing",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 223,
+    "is_number": "IS 13484:2024",
+    "title": "Method for Macroetch Test for Copper and Copper Alloys",
+    "domain": "Metallurgy / Testing",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 224,
+    "is_number": "IS 13605:2024",
+    "title": "Macroetch Test for Zinc and Zinc Alloys - Method of Test",
+    "domain": "Metallurgy / Testing",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 225,
+    "is_number": "IS 13691:1993",
+    "title": "Steel - Determination of total or effective thickness of thin surface-hardened layers",
+    "domain": "Metallurgy / Testing",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 226,
+    "is_number": "IS 15426:2004",
+    "title": "Steel - Metallographic characterization of duplex grain size and distributions",
+    "domain": "Metallurgy / Testing",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 227,
+    "is_number": "IS 15839:2024",
+    "title": "Determination of Ferrite Content in Austenitic Stainless Steel Castings",
+    "domain": "Metallurgy / Testing",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 228,
+    "is_number": "IS 17174:2020",
+    "title": "Determination of Percentage of Resolvable Pearlite in High Carbon Steel Wire Rod",
+    "domain": "Metallurgy / Testing",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 229,
+    "is_number": "IS 18715:2024",
+    "title": "Steels - Manual Point Counting Method for Statistically Estimating the Volume Fraction of a Constituent with a Point Grid",
+    "domain": "Metallurgy / Testing",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 230,
+    "is_number": "IS 18829:2024",
+    "title": "Copper and copper alloys - Estimation of average grain size",
+    "domain": "Metallurgy / Testing",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 231,
+    "is_number": "IS 3848:2024",
+    "title": "Steel - Hardenability Test by End Quenching (Jominy Test)",
+    "domain": "Metallurgy / Testing",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 232,
+    "is_number": "IS 4075:2024",
+    "title": "Macrostreak Flaw Test for Steel - Method of Test",
+    "domain": "Metallurgy / Testing",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 233,
+    "is_number": "IS 4163:2021",
+    "title": "Steel - Determination of content of non-metallic inclusions - Micrographic method",
+    "domain": "Metallurgy / Testing",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 234,
+    "is_number": "IS 4748:2021",
+    "title": "Steel - Micrographic determination of the apparent grain size",
+    "domain": "Metallurgy / Testing",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 235,
+    "is_number": "IS 5699:1970",
+    "title": "Methods for chill testing of cast iron",
+    "domain": "Metallurgy / Testing",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 236,
+    "is_number": "IS 6416:2022",
+    "title": "Method for measuring case-depth of steel",
+    "domain": "Metallurgy / Testing",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 237,
+    "is_number": "IS 7754 (Part 1):2022",
+    "title": "Microstructure of Cast Irons - Part 1 Graphite Classification by Visual Analysis",
+    "domain": "Metallurgy / Testing",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 238,
+    "is_number": "IS 7754 (Part 2):2024",
+    "title": "Microstructure of Cast Irons - Part 2 Graphite classification by image analysis",
+    "domain": "Metallurgy / Testing",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 239,
+    "is_number": "IS 7754 (Part 3):2024",
+    "title": "Microstructure of Cast Iron - Part 3 Matrix Structures",
+    "domain": "Metallurgy / Testing",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 240,
+    "is_number": "IS 9415:2024",
+    "title": "Method for Determination of Hardenability and Grain Size of Tool Steels by Penetration Fracture Test",
+    "domain": "Metallurgy / Testing",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 241,
+    "is_number": "IS 7739 (Part 1):1975",
+    "title": "Code of practice for preparation of metallographic specimens - Part 1 General features",
+    "domain": "Metallurgy / Metallography",
+    "standard_type": "Code of Practice",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 242,
+    "is_number": "IS 7739 (Part 2):1975",
+    "title": "Code of practice for preparation of metallographic specimens - Part 2 Electrolytic polishing",
+    "domain": "Metallurgy / Metallography",
+    "standard_type": "Code of Practice",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 243,
+    "is_number": "IS 7739 (Part 3):1975",
+    "title": "Code of practice for preparation of metallographic specimens - Part 3 Aluminium and its alloys",
+    "domain": "Metallurgy / Metallography",
+    "standard_type": "Code of Practice",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 244,
+    "is_number": "IS 7739 (Part 4):1975",
+    "title": "Code of practice for preparation of metallographic specimens - Part 4 Copper and its alloys",
+    "domain": "Metallurgy / Metallography",
+    "standard_type": "Code of Practice",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 245,
+    "is_number": "IS 7739 (Part 5):1976",
+    "title": "Code of practice for preparation of metallographic specimens - Part 5 Iron and steel",
+    "domain": "Metallurgy / Metallography",
+    "standard_type": "Code of Practice",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 246,
+    "is_number": "IS 7739 (Part 6):1975",
+    "title": "Code of practice for preparation of metallographic specimens - Part 6 Lead and its alloys",
+    "domain": "Metallurgy / Metallography",
+    "standard_type": "Code of Practice",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 247,
+    "is_number": "IS 7739 (Part 7):1975",
+    "title": "Code of practice for preparation of metallographic specimens - Part 7 Magnesium and its alloys",
+    "domain": "Metallurgy / Metallography",
+    "standard_type": "Code of Practice",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 248,
+    "is_number": "IS 7739 (Part 8):1975",
+    "title": "Code of practice for preparation of metallographic specimens - Part 8 Nickel and its alloys",
+    "domain": "Metallurgy / Metallography",
+    "standard_type": "Code of Practice",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 249,
+    "is_number": "IS 7739 (Part 9):1975",
+    "title": "Code of practice for preparation of metallographic specimens - Part 9 Gold, silver, platinum and palladium",
+    "domain": "Metallurgy / Metallography",
+    "standard_type": "Code of Practice",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 250,
+    "is_number": "IS 7739 (Part 10):1975",
+    "title": "Code of practice for preparation of metallographic specimens - Part 10 Tin and its alloys",
+    "domain": "Metallurgy / Metallography",
+    "standard_type": "Code of Practice",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 251,
+    "is_number": "IS 7739 (Part 11):1976",
+    "title": "Code of practice for preparation of metallographic specimens - Part 11 Zinc and its alloys",
+    "domain": "Metallurgy / Metallography",
+    "standard_type": "Code of Practice",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-05-11-59-24.pdf"
+  },
+  {
+    "id": 252,
+    "is_number": "IS/ISO/TR 10217:1989",
+    "title": "Solar Energy - Water Heating Systems - Guide to Material Selection with Regard to Internal Corrosion",
+    "domain": "Renewable Energy / Solar Thermal",
+    "standard_type": "Guide",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-20-13.pdf"
+  },
+  {
+    "id": 253,
+    "is_number": "IS 12976:2023",
+    "title": "Solar Water Heating Systems - Code of Practice",
+    "domain": "Renewable Energy / Solar Thermal",
+    "standard_type": "Code of Practice",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-20-13.pdf"
+  },
+  {
+    "id": 254,
+    "is_number": "IS 13129 (Part 1):2023",
+    "title": "Solar Heating - Domestic Water Heating Systems Part 1 Performance Rating Procedure Using Indoor Test Methods",
+    "domain": "Renewable Energy / Solar Thermal",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-20-13.pdf"
+  },
+  {
+    "id": 255,
+    "is_number": "IS 13129 (Part 2):2023",
+    "title": "Solar Heating - Domestic Water Heating Systems Part 2 System Performance Characterization and Yearly Performance Prediction",
+    "domain": "Renewable Energy / Solar Thermal",
+    "standard_type": "Test/Performance Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-20-13.pdf"
+  },
+  {
+    "id": 256,
+    "is_number": "IS 13129 (Part 3):2024",
+    "title": "Solar Heating - Domestic Water Heating Systems Part 3 System Component Characterization and Prediction",
+    "domain": "Renewable Energy / Solar Thermal",
+    "standard_type": "Test/Performance Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-20-13.pdf"
+  },
+  {
+    "id": 257,
+    "is_number": "IS 13129 (Part 4):2023",
+    "title": "Solar Heating - Domestic Water Heating Systems Part 4 Determination of Durability and Reliability",
+    "domain": "Renewable Energy / Solar Thermal",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-20-13.pdf"
+  },
+  {
+    "id": 258,
+    "is_number": "IS 16368:2015",
+    "title": "Test Procedure for Thermosyphon Type Domestic Solar Hot Water Heating Systems",
+    "domain": "Renewable Energy / Solar Thermal",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-20-13.pdf"
+  },
+  {
+    "id": 259,
+    "is_number": "IS 16544:2016",
+    "title": "All Glass Evacuated Tubes Solar Water Heating System",
+    "domain": "Renewable Energy / Solar Thermal",
+    "standard_type": "Product Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-20-13.pdf"
+  },
+  {
+    "id": 260,
+    "is_number": "IS 15490",
+    "title": "Stainless Steel Cylinder",
+    "domain": "Automotive / LPG/CNG Components",
+    "standard_type": "Product Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 261,
+    "is_number": "IS 15935",
+    "title": "Composite Cylinder",
+    "domain": "Automotive / LPG/CNG Components",
+    "standard_type": "Product Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 262,
+    "is_number": "IS 16988",
+    "title": "Cylinder Valve",
+    "domain": "Automotive / LPG/CNG Components",
+    "standard_type": "Product Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 263,
+    "is_number": "IS 15712",
+    "title": "Automatic Valve (Solenoid Valve)",
+    "domain": "Automotive / LPG/CNG Components",
+    "standard_type": "Product Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 264,
+    "is_number": "IS 15713",
+    "title": "Pressure Regulator",
+    "domain": "Automotive / LPG/CNG Components",
+    "standard_type": "Product Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 265,
+    "is_number": "IS 15714",
+    "title": "Gas/Air Mixer",
+    "domain": "Automotive / LPG/CNG Components",
+    "standard_type": "Product Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 266,
+    "is_number": "IS 15715",
+    "title": "Ventilation Hose/Pipe",
+    "domain": "Automotive / LPG/CNG Components",
+    "standard_type": "Product Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 267,
+    "is_number": "IS 15716",
+    "title": "High Pressure Fuel Line (Rigid)",
+    "domain": "Automotive / LPG/CNG Components",
+    "standard_type": "Product Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 268,
+    "is_number": "IS 15717",
+    "title": "Petrol Valve (Auto/Manual)",
+    "domain": "Automotive / LPG/CNG Components",
+    "standard_type": "Product Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 269,
+    "is_number": "IS 15718",
+    "title": "High Pressure Fuel Line (Flexible Hose)",
+    "domain": "Automotive / LPG/CNG Components",
+    "standard_type": "Product Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 270,
+    "is_number": "IS 15719",
+    "title": "Electrical Wiring Kit",
+    "domain": "Automotive / LPG/CNG Components",
+    "standard_type": "Product Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 271,
+    "is_number": "IS 302 (Part 2/Sec 12):1993",
+    "title": "Safety of household and similar electrical appliances - Part 2 Particular requirements: Section 12 Warming plates and similar appliances",
+    "domain": "Electrical Appliances",
+    "standard_type": "Safety Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 272,
+    "is_number": "IS 302 (Part 2/Sec 32):1994",
+    "title": "Safety of household and similar electrical appliances - Part 2 Particular requirements: Section 32 Massage appliances",
+    "domain": "Electrical Appliances",
+    "standard_type": "Safety Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 273,
+    "is_number": "IS 302 (Part 2/Sec 45):1994",
+    "title": "Safety of household and similar electrical appliances - Part 2 Particular requirements: Section 45 Electric heating tools",
+    "domain": "Electrical Appliances",
+    "standard_type": "Safety Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 274,
+    "is_number": "IS 302 (Part 2/Sec 209):1994",
+    "title": "Safety of household and similar electrical appliances - Part 2 Particular requirements: Section 209 Low speed food grinding machines",
+    "domain": "Electrical Appliances",
+    "standard_type": "Safety Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 275,
+    "is_number": "IS/IEC 60730 (Part 1):1999",
+    "title": "Automatic electrical controls for household and similar use - Part 1 General requirements",
+    "domain": "Electrical Controls",
+    "standard_type": "Safety Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 276,
+    "is_number": "IS 16636:2017",
+    "title": "Automatic power factor correction panels for voltage rating up to and including 1000 V",
+    "domain": "Electrical / Panels",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 277,
+    "is_number": "IS 17120:2019",
+    "title": "In-cable control and protection device for mode 2 charging of electric road vehicles",
+    "domain": "Electric Vehicles / Charging",
+    "standard_type": "Product Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 278,
+    "is_number": "IS 17550 (Part 1):2024",
+    "title": "Household refrigerating appliances - Characteristics and test methods - Part 1 General requirements",
+    "domain": "Domestic Appliances / Refrigeration",
+    "standard_type": "Test/Technical Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 279,
+    "is_number": "IS 15787:2025",
+    "title": "Switched Socket-Outlets without Interlock for Fixed Installations - Particular Requirements",
+    "domain": "Electrical / Switchgear",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 280,
+    "is_number": "IS/IEC 62368 (Part 1):2023",
+    "title": "Audio Video Information and Communication Technology Equipment - Part 1 Safety Requirements",
+    "domain": "Electronics / ICT",
+    "standard_type": "Safety Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 281,
+    "is_number": "IS/IEC 62807 (Part 3):2023",
+    "title": "Hybrid Communication Cables - Part 3 Outdoor Hybrid Cables",
+    "domain": "Telecom / Cables",
+    "standard_type": "Product Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 282,
+    "is_number": "IS/IEC 62807 (Part 3/Sec 10):2023",
+    "title": "Hybrid communication cables - Part 3-10 Outdoor hybrid cables - Family specification for FTTA hybrid communication cables",
+    "domain": "Telecom / Cables",
+    "standard_type": "Product Specification",
+    "status": "Active/Current candidate",
+    "source_url": "https://standards.bis.gov.in/"
+  },
+  {
+    "id": 283,
+    "is_number": "IS/IEC 61683:1999",
+    "title": "Photovoltaic systems - Power conditioners - Procedure for measuring efficiency",
+    "domain": "Renewable Energy / Solar PV",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-20-13.pdf"
+  },
+  {
+    "id": 284,
+    "is_number": "IS/IEC 61701:2011",
+    "title": "Salt mist corrosion testing of photovoltaic (PV) modules",
+    "domain": "Renewable Energy / Solar PV",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-20-13.pdf"
+  },
+  {
+    "id": 285,
+    "is_number": "IS/IEC 61730 (Part 1):2016",
+    "title": "Photovoltaic (PV) Module Safety Qualification - Part 1 Requirements for Construction",
+    "domain": "Renewable Energy / Solar PV",
+    "standard_type": "Safety Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-20-13.pdf"
+  },
+  {
+    "id": 286,
+    "is_number": "IS/IEC 61730 (Part 2):2016",
+    "title": "Photovoltaic (PV) module safety qualification - Part 2 Requirements for testing",
+    "domain": "Renewable Energy / Solar PV",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-20-13.pdf"
+  },
+  {
+    "id": 287,
+    "is_number": "IS 17210 (Part 1):2019",
+    "title": "Photovoltaic (PV) Modules - Test Methods for the Detection of Potential-Induced Degradation Part 1 Crystalline Silicon",
+    "domain": "Renewable Energy / Solar PV",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-20-13.pdf"
+  },
+  {
+    "id": 288,
+    "is_number": "IS 14286:2010",
+    "title": "Crystalline silicon terrestrial photovoltaic (PV) modules - Design qualification and type approval",
+    "domain": "Renewable Energy / Solar PV",
+    "standard_type": "Product/Test Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-20-13.pdf"
+  },
+  {
+    "id": 289,
+    "is_number": "IS 12762:2020",
+    "title": "Photovoltaic Devices - Part 3 Measurement Principles for Terrestrial Photovoltaic Solar Devices with Reference Spectral Irradiance Data",
+    "domain": "Renewable Energy / Solar PV",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-20-13.pdf"
+  },
+  {
+    "id": 290,
+    "is_number": "IS 14733",
+    "title": "Photovoltaic PV arrays - Design requirements",
+    "domain": "Renewable Energy / Solar PV",
+    "standard_type": "Design Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-20-13.pdf"
+  },
+  {
+    "id": 291,
+    "is_number": "IS 14742",
+    "title": "Photovoltaic cells - Part 1 Measurement of light-induced degradation of crystalline silicon photovoltaic cells",
+    "domain": "Renewable Energy / Solar PV",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-20-13.pdf"
+  },
+  {
+    "id": 292,
+    "is_number": "IS 14747",
+    "title": "Terrestrial photovoltaic PV systems - Guidelines for effective quality assurance in PV systems installation operation and maintenance",
+    "domain": "Renewable Energy / Solar PV",
+    "standard_type": "Guideline",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-20-13.pdf"
+  },
+  {
+    "id": 293,
+    "is_number": "IS 14749",
+    "title": "Photovoltaic PV modules through the life cycle - Environmental health and safety risk assessment - General principles and nomenclature",
+    "domain": "Renewable Energy / Solar PV",
+    "standard_type": "Guideline",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-20-13.pdf"
+  },
+  {
+    "id": 294,
+    "is_number": "IS 14750",
+    "title": "Primary optics for concentrator photovoltaic systems",
+    "domain": "Renewable Energy / Solar PV",
+    "standard_type": "Product/Design Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-20-13.pdf"
+  },
+  {
+    "id": 295,
+    "is_number": "IS 14751",
+    "title": "Concentrator photovoltaic CPV modules - Thermal cycling test to differentiate increased thermal fatigue durability",
+    "domain": "Renewable Energy / Solar PV",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-20-13.pdf"
+  },
+  {
+    "id": 296,
+    "is_number": "IS 14757",
+    "title": "Photovoltaic PV modules - Type approval design and safety qualification - Retesting",
+    "domain": "Renewable Energy / Solar PV",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-20-13.pdf"
+  },
+  {
+    "id": 297,
+    "is_number": "IS 14758",
+    "title": "Photovoltaic concentrator cell documentation",
+    "domain": "Renewable Energy / Solar PV",
+    "standard_type": "Technical Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-20-13.pdf"
+  },
+  {
+    "id": 298,
+    "is_number": "IS 14760",
+    "title": "Measurement procedures for materials used in photovoltaic modules - Part 2 Polymeric materials - Frontsheets and backsheets",
+    "domain": "Renewable Energy / Solar PV",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-20-13.pdf"
+  },
+  {
+    "id": 299,
+    "is_number": "IS 14729",
+    "title": "Photovoltaic devices - Part 1-2 Measurement of current-voltage characteristics of bifacial photovoltaic devices",
+    "domain": "Renewable Energy / Solar PV",
+    "standard_type": "Test Method",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-20-13.pdf"
+  },
+  {
+    "id": 300,
+    "is_number": "IS 14732",
+    "title": "Photovoltaic PV systems - Characteristics of the utility interface",
+    "domain": "Renewable Energy / Solar PV",
+    "standard_type": "Technical Standard",
+    "status": "Active/Current candidate",
+    "source_url": "https://www.services.bis.gov.in/tmp/compendium_2025-06-02-05-20-13.pdf"
+  },
+  {
+    "id": 301,
+    "is_number": "IS 12269:2013",
+    "title": "Ordinary Portland Cement 53 Grade - Specification",
+    "domain": "Civil Engineering / Cement",
+    "standard_type": "Product Specification",
+    "status": "Historical/Referenced Version",
+    "source_url": "https://www.bis.gov.in/qazwsx/cmd/GS-STI_12269_27082014.pdf"
+  },
+  {
+    "id": 302,
+    "is_number": "IS 3812 (Part 1):2013",
+    "title": "Pulverized fuel ash - Specification: Part 1 For use as pozzolana in cement, cement mortar and concrete",
+    "domain": "Civil Engineering / Cement",
+    "standard_type": "Product Specification",
+    "status": "Active/Referenced",
+    "source_url": "https://lims.bis.gov.in/home/search_is_number/?is_number__doc_no=3812"
+  },
+  {
+    "id": 303,
+    "is_number": "IS 12089:1987",
+    "title": "Specification for granulated slag for the manufacture of Portland slag cement",
+    "domain": "Civil Engineering / Cement",
+    "standard_type": "Product Specification",
+    "status": "Referenced",
+    "source_url": "https://lims.bis.gov.in/home/search_is_number/?is_number__doc_no=12089"
+  },
+  {
+    "id": 304,
+    "is_number": "IS 15388:2003",
+    "title": "Silica Fume - Specification",
+    "domain": "Civil Engineering / Cement",
+    "standard_type": "Product Specification",
+    "status": "Active/Referenced",
+    "source_url": "https://standards.bis.gov.in/website/standard-details"
+  },
+  {
+    "id": 305,
+    "is_number": "IS 1760 (Part 3):1992",
+    "title": "Chemical Analysis of Limestone, Dolomite and Allied Materials - Part 3 Determination of Iron Oxide, Alumina, Calcium Oxide and Magnesia",
+    "domain": "Civil Engineering / Cement",
+    "standard_type": "Test Method",
+    "status": "Historical/Referenced Version",
+    "source_url": "https://www.services.bis.gov.in/tmp/weekly_bulletin_2_575.pdf"
+  },
+  {
+    "id": 306,
+    "is_number": "IS 1727:1967",
+    "title": "Methods of Test for Pozzolanic Materials",
+    "domain": "Civil Engineering / Cement",
+    "standard_type": "Test Method",
+    "status": "Referenced",
+    "source_url": "https://www.services.bis.gov.in/tmp/SR1727.pdf"
+  },
+  {
+    "id": 307,
+    "is_number": "IS 17410:2020",
+    "title": "Medical Textiles - Bio-Protective Coverall - Specification",
+    "domain": "Textiles / Medical Textiles",
+    "standard_type": "Product Specification",
+    "status": "Referenced",
+    "source_url": "https://www.services.bis.gov.in/php/BIS_2.0/bisconnect/pow_new/Pow/download_pow_pdf_dept_commtt/71/134/"
+  },
+  {
+    "id": 308,
+    "is_number": "IS 228 (Part 1):1987",
+    "title": "Methods for Chemical Analysis of Steels - Part 1 Determination of Carbon by Volumetric Method",
+    "domain": "Metallurgical Engineering / Steel",
+    "standard_type": "Test Method",
+    "status": "Referenced",
+    "source_url": "https://services.bis.gov.in/php/BIS_2.0/bisconnect/standard_review/Standard_review/Isdetails"
+  },
+  {
+    "id": 309,
+    "is_number": "IS 6885 (Part 1):2020",
+    "title": "Metallic Materials - Knoop Hardness Test Part 1 Test Method",
+    "domain": "Metallurgical Engineering / Testing",
+    "standard_type": "Test Method",
+    "status": "Active/Referenced",
+    "source_url": "https://www.services.bis.gov.in/tmp/weekly_bulletin_3_76.pdf"
+  },
+  {
+    "id": 310,
+    "is_number": "IS 16354:2015",
+    "title": "Metakaolin for use in cement, cement mortar and concrete - Specification",
+    "domain": "Civil Engineering / Cement",
+    "standard_type": "Product Specification",
+    "status": "Referenced",
+    "source_url": "https://www.services.bis.gov.in/php/BIS_2.0/bisconnect/pow_new/Pow/download_pow_pdf_dept_commtt/63/190/"
+  },
+  {
+    "id": 311,
+    "is_number": "IS 1344:1981",
+    "title": "Specification for Calcined Clay Pozzolana",
+    "domain": "Civil Engineering / Cement",
+    "standard_type": "Product Specification",
+    "status": "Referenced",
+    "source_url": "https://www.services.bis.gov.in/tmp/WCCED21426776_10022025_1.pdf"
+  },
+  {
+    "id": 312,
+    "is_number": "IS 16714:2018",
+    "title": "Ground Granulated Blast Furnace Slag for Use in Cement, Mortar and Concrete - Specification",
+    "domain": "Civil Engineering / Cement",
+    "standard_type": "Product Specification",
+    "status": "Referenced",
+    "source_url": "https://lims.bis.gov.in/home/search_is_number/?is_number__doc_no=16714"
+  },
+  {
+    "id": 313,
+    "is_number": "IS 9550:2024",
+    "title": "Bright Steel Bars - Specification",
+    "domain": "Metallurgical Engineering / Steel",
+    "standard_type": "Product Specification",
+    "status": "Active/Current",
+    "source_url": "https://services.bis.gov.in/php/BIS_2.0/bisconnect/standard_review/Standard_review/Isdetails?ID=MzIwMTc%3D"
+  },
+  {
+    "id": 314,
+    "is_number": "IS 269:2013",
+    "title": "Ordinary Portland Cement, 33 Grade",
+    "domain": "Civil Engineering / Cement and Concrete",
+    "standard_type": "Product Specification",
+    "status": "Historical Version / Referenced",
+    "source_url": "https://standards.bis.gov.in/"
+  }
+]
