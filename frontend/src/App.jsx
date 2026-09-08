@@ -2145,7 +2145,6 @@ function LoginScreen({ onLogin }) {
 
   return (
     <>
-      <style>{UI_STYLES}</style>
       <div className="login-shell">
       <div className="login-panel">
         <div className="login-grid" />
@@ -2583,8 +2582,6 @@ function App() {
 
   return (
     <div className="app">
-    <style>{UI_STYLES}</style>
-
       {/* ======================================================
           NAVBAR
       ====================================================== */}
